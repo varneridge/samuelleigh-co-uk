@@ -1,15 +1,19 @@
 ---
 title: Secretary
-period: 'Apr 2025 - 2026'
+period: Apr 2025 - 2026
 order: 30
-org: 'LSE Raising and Giving (RAG), London'
-logo: /images/placeholder-rag.png
-summary: 'RAG had never contacted its alumni. I built the contact base and ran the programme.'
-role: 'Secretary; previously Charity Officer'
-context: 'A student fundraising society with a committee of over forty.'
+summary: RAG had never contacted its alumni. I built the contact base and ran the programme.
+org: LSE Raising and Giving (RAG), London
+logo: /images/pasted-image-1788902536372.png
 bullets:
-  - 'Built an alumni engagement programme from nothing, via LinkedIn and the university alumni relations team. Giving Tuesday fundraising grew from £536 to over £1,000 year on year.'
-  - 'Coordinated committee administration across a forty-plus member committee. Previously Charity Officer, contributing to a £14,000 fundraising total for partners including Safe Passage International.'
+  - Built an alumni engagement programme from nothing, via LinkedIn and the university alumni relations team. Giving Tuesday fundraising grew from £536 to over £1,000 year on year.
+  - Coordinated committee administration across a forty-plus member committee. Previously Charity Officer, contributing to a £14,000 fundraising total for partners including Safe Passage International.
+role: Secretary; previously Charity Officer
+context: A student fundraising society with a committee of over forty.
+thumbnail: ''
+image: ''
+imageCaption: ''
+draft: false
 ---
 
 I served as Charity Officer from October 2024 to April 2025 and then as Secretary until 2026.
