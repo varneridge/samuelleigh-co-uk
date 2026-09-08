@@ -297,6 +297,11 @@ collections:
           - {name: headingExperience, label: 'Home heading: experience', widget: string}
           - {name: headingProjects, label: 'Home heading: projects', widget: string}
           - {name: headingWriting, label: 'Home heading: writing', widget: string}
+          - name: sections
+            label: Order of sections on the home page
+            widget: list
+            field: {name: key, label: Section, widget: select, options: ['education', 'experience', 'projects', 'writing', 'parliamentary', 'skills', 'ai-fluency', 'additional']}
+            hint: 'Drag to reorder. Remove a line to hide that section entirely.'
       - name: writing-index
         label: Writing page heading
         file: src/content/pages/writing-index.md
@@ -332,13 +337,27 @@ collections:
         fields:
           - {name: title, label: Heading, widget: string}
           - {name: lede, label: Intro line, widget: text}
-      - name: closing
-        label: Parliamentary engagement, skills, additional
-        file: src/content/pages/closing.md
+      - name: parliamentary
+        label: 'CV section: parliamentary engagement'
+        file: src/content/pages/parliamentary.md
         fields:
-          - name: title
-            label: Section heading
-            widget: string
-          - name: body
-            label: Body
-            widget: markdown
+          - {name: title, label: Section heading, widget: string}
+          - {name: body, label: Body, widget: markdown}
+      - name: skills
+        label: 'CV section: skills'
+        file: src/content/pages/skills.md
+        fields:
+          - {name: title, label: Section heading, widget: string}
+          - {name: body, label: Body, widget: markdown}
+      - name: ai-fluency
+        label: 'CV section: AI fluency'
+        file: src/content/pages/ai-fluency.md
+        fields:
+          - {name: title, label: Section heading, widget: string}
+          - {name: body, label: Body, widget: markdown}
+      - name: additional
+        label: 'CV section: additional information'
+        file: src/content/pages/additional.md
+        fields:
+          - {name: title, label: Section heading, widget: string}
+          - {name: body, label: Body, widget: markdown}

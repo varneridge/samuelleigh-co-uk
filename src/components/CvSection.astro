@@ -13,17 +13,16 @@ interface Props {
 }
 
 const { items } = Astro.props;
-const hasLogos = items.some((i) => i.logo);
 ---
 
-<div class={`cv-block${hasLogos ? ' with-logos' : ''}`}>
+<div class="cv-block">
   {items.map((item) => (
     <article class="cv-entry">
       <div class="cv-head">
-        {hasLogos && (
-          <span class="cv-logo">
-            {item.logo && <img src={item.logo} alt="" loading="lazy" />}
-          </span>
+        {item.logo && (
+          item.href
+            ? <a class="cv-logo" href={item.href} aria-hidden="true" tabindex="-1"><img src={item.logo} alt="" loading="lazy" /></a>
+            : <span class="cv-logo"><img src={item.logo} alt="" loading="lazy" /></span>
         )}
         {item.href
           ? <a class="cv-title" href={item.href}>{item.title}</a>

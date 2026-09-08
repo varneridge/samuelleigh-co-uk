@@ -16,4 +16,13 @@ headingEducation: Education
 headingExperience: Experience
 headingProjects: Projects
 headingWriting: Writing
+sections:
+  - education
+  - experience
+  - projects
+  - writing
+  - parliamentary
+  - skills
+  - ai-fluency
+  - additional
 ---

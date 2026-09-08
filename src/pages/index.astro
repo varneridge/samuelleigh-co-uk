@@ -5,10 +5,8 @@ import EntryList from '../components/EntryList.astro';
 import CvSection from '../components/CvSection.astro';
 import { shortDate } from '../format';
 
-const intro = await getEntry('pages', 'intro');
 const s = (await getEntry('pages', 'settings'))!.data;
-const closing = await getEntry('pages', 'closing');
-const { Content: Closing } = await render(closing!);
+const intro = (await getEntry('pages', 'intro'))!.data;
 
 const toCv = (base: string) => (e: any) => ({
   href: `/${base}/${e.id}`,
@@ -21,7 +19,7 @@ const toCv = (base: string) => (e: any) => ({
 
 const education = (await getCollection('education', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
-  .map((e) => ({ href: '/education', title: e.data.title, period: e.data.period, org: e.data.org, logo: e.data.logo, bullets: e.data.bullets }));
+  .map((e) => ({ ...toCv('education')(e), href: '/education' }));
 
 const experience = (await getCollection('experience', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
@@ -40,36 +38,65 @@ const writing = (await getCollection('writing', ({ data }) => !data.draft))
     title: e.data.title,
     summary: e.data.summary
   }));
+
+// Prose sections are ordinary markdown files, rendered in whatever order settings lists them.
+const proseKeys = ['parliamentary', 'skills', 'ai-fluency', 'additional'];
+const prose: Record<string, { title?: string; Content: any }> = {};
+for (const key of proseKeys) {
+  const entry = await getEntry('pages', key);
+  if (entry) prose[key] = { title: entry.data.title, Content: (await render(entry)).Content };
+}
+
+const order = s.sections?.length ? s.sections : [...['education', 'experience', 'projects', 'writing'], ...proseKeys];
 ---
 
-<Base title={s.name!} description="Samuel Leigh: final-year International History student at LSE. CV, writing, experience and projects.">
-  <p class="lede">{intro!.data.lede}</p>
+<Base title={s.name!} description="Samuel Leigh: CV, writing, experience and projects.">
+  <p class="lede">{intro.lede}</p>
 
-  <h2>{s.headingEducation}</h2>
-  <CvSection items={education} />
-  <p class="meta" style="margin-top:-0.8rem;"><a href="/education">Modules and societies in detail</a></p>
+  {order.map((key) => {
+    if (key === 'education' && education.length > 0) return (
+      <>
+        <h2>{s.headingEducation}</h2>
+        <CvSection items={education} />
+        <p class="meta section-more"><a href="/education">Modules and societies in detail</a></p>
+      </>
+    );
+    if (key === 'experience' && experience.length > 0) return (
+      <>
+        <h2>{s.headingExperience}</h2>
+        <CvSection items={experience} />
+        <p class="meta section-more"><a href="/experience">All experience in detail</a></p>
+      </>
+    );
+    if (key === 'projects' && projects.length > 0) return (
+      <>
+        <h2>{s.headingProjects}</h2>
+        <CvSection items={projects} />
+        <p class="meta section-more"><a href="/projects">All projects in detail</a></p>
+      </>
+    );
+    if (key === 'writing' && writing.length > 0) return (
+      <>
+        <h2>{s.headingWriting}</h2>
+        <EntryList items={writing} tinted={true} />
+        <p class="meta section-more"><a href="/writing">All writing</a></p>
+      </>
+    );
+    const block = prose[key];
+    if (block) {
+      const { Content } = block;
+      return (
+        <>
+          <h2>{block.title}</h2>
+          <div class="prose"><Content /></div>
+        </>
+      );
+    }
+    return null;
+  })}
 
-  <h2>{s.headingExperience}</h2>
-  <CvSection items={experience} />
-  <p class="meta" style="margin-top:-0.8rem;"><a href="/experience">All experience in detail</a></p>
-
-  <h2>{s.headingProjects}</h2>
-  <CvSection items={projects} />
-  <p class="meta" style="margin-top:-0.8rem;"><a href="/projects">All projects in detail</a></p>
-
-  {writing.length > 0 && (
-    <>
-      <h2>{s.headingWriting}</h2>
-      <EntryList items={writing} tinted={true} />
-      <p class="meta" style="margin-top:-1.4rem;"><a href="/writing">All writing</a></p>
-    </>
-  )}
-
-  <div class="prose"><Closing /></div>
-
-  <p class="meta" style="margin-top:2.4rem;">
+  <p class="meta" style="margin-top:2rem;">
     {s.cv && <><a href={s.cv}>Download the CV as a PDF</a>{s.cvUpdated ? `, last updated ${s.cvUpdated}` : ''}. </>}
-    Or write to me at
-    <a href={`mailto:${s.email}`}>{s.email}</a>.
+    Or write to me at <a href={`mailto:${s.email}`}>{s.email}</a>.
   </p>
 </Base>

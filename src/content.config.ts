@@ -91,7 +91,8 @@ const pages = defineCollection({
     headingEducation: z.string().optional(),
     headingExperience: z.string().optional(),
     headingProjects: z.string().optional(),
-    headingWriting: z.string().optional()
+    headingWriting: z.string().optional(),
+    sections: z.array(z.string()).default([])
   })
 });
 

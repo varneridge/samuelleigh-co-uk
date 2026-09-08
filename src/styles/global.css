@@ -45,7 +45,15 @@ body {
   gap: 3rem;
 }
 
-.rail { position: sticky; top: 3rem; align-self: start; }
+/* The sidebar stays put while the long CV column scrolls past it. */
+.rail {
+  position: sticky;
+  top: 2.6rem;
+  align-self: start;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
 
 .rail-photo {
   width: 100%;
@@ -103,7 +111,10 @@ body {
   line-height: 1.8;
 }
 
-.rail-contact a { color: var(--slate); }
+.rail-contact a {
+  color: var(--slate);
+  overflow-wrap: anywhere;
+}
 
 main { min-width: 0; }
 
@@ -117,6 +128,17 @@ h1, h2, h3 {
 
 h1 { font-size: var(--fs-2xl); }
 h2 { font-size: var(--fs-xl); font-weight: 600; margin-top: 2rem; }
+
+/* Section banners on the CV page. The keyline gives the accent colour a
+   structural job and keeps a banner distinct from the tinted writing block. */
+main > h2 {
+  border-left: 3px solid var(--magenta);
+  padding: 0.05rem 0 0.05rem 0.6rem;
+  margin: 1.9rem 0 0.7rem;
+  max-width: var(--measure);
+}
+
+main > h2:first-of-type { margin-top: 1.4rem; }
 h3 { font-size: var(--fs-lg); font-weight: 600; }
 
 p, ul, ol, blockquote { max-width: var(--measure); }
@@ -148,9 +170,10 @@ main > :first-child { margin-top: 0; }
 .entries { margin: 0 0 2.6rem; }
 
 .entries.tinted {
-  background: var(--foreshore);
-  border-radius: 6px;
-  padding: 0.25rem 1rem 0.7rem;
+  background: transparent;
+  border-left: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 0.1rem 0 0.2rem 1rem;
 }
 
 .entry {
@@ -160,10 +183,10 @@ main > :first-child { margin-top: 0; }
   border-top: 1px solid var(--rule);
 }
 
-.entries.tinted .entry { border-top-color: #D6CBB2; }
+.entries.tinted .entry { border-top-color: var(--rule); }
 .entries.tinted .entry:first-child,
 .entries .entry:first-child { border-top: none; }
-.entries.tinted .entry:first-child + .entry { border-top: 1px solid #D6CBB2; }
+.entries.tinted .entry:first-child + .entry { border-top: 1px solid var(--rule); }
 
 .entry-date {
   flex: 0 0 56px;
@@ -173,7 +196,7 @@ main > :first-child { margin-top: 0; }
   padding-top: 4px;
 }
 
-.entries.tinted .entry-date { color: var(--ink); }
+.entries.tinted .entry-date { color: var(--slate); }
 
 .entry-body { min-width: 0; }
 
@@ -274,6 +297,7 @@ blockquote p:last-child { margin-bottom: 0; }
 .prose li { margin-bottom: 0.5rem; font-size: var(--fs-md); line-height: 1.45; }
 .prose li > strong:first-child { display: block; }
 .prose ul { padding-left: 1.05rem; margin: 0.3rem 0 0.9rem; }
+.section-more { margin-top: -0.7rem; }
 .prose ul li::marker { color: var(--slate); }
 .prose h2 + p { margin-bottom: 0.3rem; }
 
@@ -340,30 +364,37 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
 /* CV-style blocks on the home page */
 .cv-block { margin: 0 0 1.3rem; max-width: var(--measure); }
 
-.cv-entry { margin: 0 0 1.05rem; position: relative; }
+/* No rules between entries. The logos and the space carry the separation. */
+.cv-entry {
+  position: relative;
+  margin: 0 0 1.3rem;
+}
+
+.cv-entry:last-child { margin-bottom: 0; }
 
 .cv-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 0.3rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.1rem;
 }
 
 /* The logo hangs in the left margin so the text column stays exactly aligned
    whether or not an entry has one. */
 .cv-logo {
   position: absolute;
-  left: -2.6rem;
+  left: -1.9rem;
   top: 0.15rem;
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
+  transition: opacity 0.12s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+a.cv-logo:hover { opacity: 0.65; }
 
 .cv-logo img {
   max-width: 100%;
