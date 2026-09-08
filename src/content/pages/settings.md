@@ -21,8 +21,8 @@ sections:
   - experience
   - projects
   - writing
+  - ai-fluency
   - parliamentary
   - skills
-  - ai-fluency
   - additional
 ---
