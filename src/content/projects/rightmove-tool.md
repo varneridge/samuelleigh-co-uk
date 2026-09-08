@@ -2,14 +2,18 @@
 title: Rightmove Property Analysis Tool
 period: '2025'
 order: 20
-org: 'A prototype rather than an enterprise tool'
+summary: A scraper and weighted scoring engine for the fields buried in the small print.
+org: A prototype rather than an enterprise tool
 logo: /images/placeholder-rightmove.png
-summary: 'A scraper and weighted scoring engine for the fields buried in the small print.'
-stack: 'Python, TfL API, Excel output'
-status: Prototype
 bullets:
   - 'Scrapes fields the Rightmove interface does not surface: square footage, service charges, ground rent, lease years, EPC rating and council tax band.'
-  - 'Scores each property from 0 to 100 against weighted criteria, with a settings interface for adjusting the weights without touching code and TfL API integration for commute times.'
+  - Scores each property from 0 to 100 against weighted criteria, with a settings interface for adjusting the weights without touching code and TfL API integration for commute times.
+stack: Python, TfL API, Excel output
+status: Prototype
+thumbnail: ''
+image: ''
+imageCaption: ''
+draft: true
 ---
 
 A prototype rather than an enterprise tool, built to solve an actual problem: the numbers that
