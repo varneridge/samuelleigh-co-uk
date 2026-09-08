@@ -1,16 +1,15 @@
 # Sveltia CMS configuration.
-# Fill in the three CHANGE ME values below before this will work.
 # See the "Editing in the browser" section of README.md for the setup steps.
 
 backend:
   name: github
   repo: varneridge/samuelleigh-co-uk
   branch: main
-  base_url: https://sveltia-cms-auth.samuel-leigh147.workers.dev/
+  base_url: https://sveltia-cms-auth.samuel-leigh147.workers.dev
 
 media_folder: public/images
 public_folder: /images
- 
+
 collections:
   - name: writing
     label: Writing
@@ -51,7 +50,7 @@ collections:
       - name: body
         label: Body
         widget: markdown
- 
+
   - name: hearings
     label: Hearings
     label_singular: Hearing note
@@ -100,7 +99,7 @@ collections:
       - name: body
         label: Body
         widget: markdown
- 
+
   - name: work
     label: Work
     label_singular: Work entry
@@ -119,7 +118,7 @@ collections:
       - name: period
         label: Period
         widget: string
-        hint: Shown in the left column of lists, e.g. 2023– or 2026.
+        hint: Shown in the left column of lists, for example "2023-" or "2026".
       - name: order
         label: Order
         widget: number
@@ -152,4 +151,3 @@ collections:
       - name: body
         label: Body
         widget: markdown
- 
