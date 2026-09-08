@@ -75,9 +75,64 @@ collections:
         label: Body
         widget: markdown
 
+<<<<<<< HEAD
   - name: experience
     label: Experience
     label_singular: Experience entry
+=======
+  - name: hearings
+    label: Hearings
+    label_singular: Hearing note
+    description: Notes from Select Committee hearings.
+    folder: src/content/hearings
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        hint: The point you took from the session, not the session name.
+      - name: date
+        label: Date of the hearing
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+      - name: committee
+        label: Committee
+        widget: string
+      - name: session
+        label: Session
+        widget: string
+        hint: 'Session title and reference, for example "The OBR: 15 Years On (HC 1583)".'
+      - name: witnesses
+        label: Witnesses
+        widget: string
+      - name: attendance
+        label: Attendance
+        widget: select
+        options: ['In person', 'Watched online']
+        default: In person
+        hint: Say "attended" only where you were in the room.
+      - name: summary
+        label: One-line summary
+        widget: text
+      - name: draft
+        label: Draft
+        widget: boolean
+        default: true
+      - name: body
+        label: Body
+        widget: markdown
+
+  - name: work
+    label: Work
+    label_singular: Work entry
+>>>>>>> 96f5009aa2e00d6f71623723856c1a2074731761
     description: Things done in more detail than a CV allows.
     folder: src/content/experience
     create: true
@@ -248,6 +303,7 @@ collections:
       - name: body
         label: Body
         widget: markdown
+<<<<<<< HEAD
 
   - name: pages
     label: Home page
@@ -325,3 +381,5 @@ collections:
           - name: body
             label: Body
             widget: markdown
+=======
+>>>>>>> 96f5009aa2e00d6f71623723856c1a2074731761
