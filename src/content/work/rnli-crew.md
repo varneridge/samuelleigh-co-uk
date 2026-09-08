@@ -26,34 +26,13 @@ Afloat, that means practising core skills: towing, anchoring, veering, helming a
 
 On service you get a short description of the incident from the Coastguard, make your way to the area, and receive a fuller brief with the tasking once you are on scene. Most often that is a search pattern for a missing person, or checking on someone in the water who a member of the public thought might be in difficulty. Most of those turn out to be nothing. A few are extremely serious, and you cannot tell which is which until you arrive, so every tasking is treated the same way.
 
-## Working with incomplete information
+## What I Have Contributed
 
-The part worth writing about is how a crew handles a tasking where the information is thin and
-changing. Describe the process rather than any individual service: how a scene gets assessed,
-how tasks get allocated, and how you communicate with HM Coastguard, police and ambulance
-while it is happening.
-
-Write about being the least experienced person aboard, about following a procedure you did not
-design and cannot improvise around, and about the gap between confidence and competence. One
-specific occasion where you got something wrong and what changed afterwards is worth more than
-a page of reflection.
-
-Keep individual shouts, casualties and incident details out of it.
-
-## Two things I changed
-
-**Navigation routes.** The station's navigation system had capacity nobody was using. I
-programmed pre-plotted routes to the locations we are most often tasked to, which cut launch
-preparation from roughly two minutes to thirty seconds at no cost. It is now standard practice
-at the station, including a version with hazards marked in.
-
-**Training sessions.** Travel and recovery time were eating into hands-on practice, so I
-proposed lengthening sessions from ninety minutes to three hours. The senior helm trialled and
-endorsed it, and the longer format is now standard for complex exercises, with ninety-minute
-slots kept for simple drills.
+1. **Navigation routes.** The station's navigation system had capacity nobody was using. I
+programmed pre-plotted routes to the locations we are most often tasked to, which cut launch preparation from roughly two minutes to thirty seconds at no cost. It is now standard practice at the station, including a version with hazards marked in.
+2. **Training sessions.** Travel and recovery time were eating into hands-on practice, so I
+proposed lengthening sessions from ninety minutes to three hours. The senior helm trialled and endorsed it, and the longer format is now standard for complex exercises, with ninety-minute slots kept for simple drills.
 
 ## On the radio
 
-I was interviewed live on BBC Radio Kent about maritime safety, which meant translating jargon
-into language that works for someone half-listening in a car, and getting the "float to live"
-cold water message in. Add a line here on what you learned about doing that.
+I was interviewed live on BBC Radio Kent about my experience on my first call out and maritime safety, which meant explaining technical language into something that works for a general audience, and balancing describing my experiences with getting the "float to live" water safety message in. This really helped boost my confidence speaking publicly, which is something I have been working on over the last year.
