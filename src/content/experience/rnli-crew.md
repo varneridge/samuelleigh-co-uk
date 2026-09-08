@@ -4,7 +4,7 @@ period: 2023-present
 order: 20
 summary: Search and rescue callouts, and what they teach you about acting on incomplete information.
 org: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).
-logo: /images/placeholder-rnli.png
+logo: /images/pasted-image-1788902390252.png
 bullets:
   - Crew on operational callouts in response to HM Coastguard taskings, assessing scene conditions under time pressure with incomplete information and coordinating with the Coastguard, police and ambulance.
   - Programmed pre-plotted routes into unused capacity in the station navigation system, cutting launch preparation from around two minutes to thirty seconds at no cost. Now standard practice at the station.
