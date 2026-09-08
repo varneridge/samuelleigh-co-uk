@@ -2,23 +2,23 @@
 import '@fontsource-variable/archivo';
 import '@fontsource-variable/source-serif-4';
 import '../styles/global.css';
-import { site } from '../site';
+import { getEntry } from 'astro:content';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = `${site.name}: writing and work.` } = Astro.props;
+const s = (await getEntry('pages', 'settings'))!.data;
+const { title, description = `${s.name}: writing, experience and CV.` } = Astro.props;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/writing', label: 'Writing' },
-  { href: '/hearings', label: 'Hearings' },
-  { href: '/work', label: 'Work' },
-  { href: '/about', label: 'About' },
-  { href: '/cv', label: 'CV' }
+  { href: '/', label: s.navAbout },
+  { href: '/education', label: s.navEducation },
+  { href: '/writing', label: s.navWriting },
+  { href: '/experience', label: s.navExperience },
+  { href: '/projects', label: s.navProjects }
 ];
 
 const isCurrent = (href: string) =>
@@ -33,7 +33,7 @@ const isCurrent = (href: string) =>
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
     <meta name="referrer" content="no-referrer" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title === site.name ? title : `${title} — ${site.name}`}</title>
+    <title>{title === s.name ? title : `${title}, ${s.name}`}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -42,8 +42,13 @@ const isCurrent = (href: string) =>
   <body>
     <div class="page">
       <header class="rail">
-        <a class="rail-name" href="/">{site.name}</a>
-        <p class="rail-place">{site.place}</p>
+        <div class="rail-id">
+          {s.photo && <img class="rail-photo" src={s.photo} alt={s.name} width="660" height="900" />}
+          <div>
+            <a class="rail-name" href="/">{s.name}</a>
+            <p class="rail-place">{s.place}</p>
+          </div>
+        </div>
         <nav aria-label="Main">
           <ul class="rail-nav">
             {nav.map((item) => (
@@ -55,17 +60,17 @@ const isCurrent = (href: string) =>
             ))}
           </ul>
         </nav>
-        <p class="rail-note">{site.note}</p>
+        <p class="rail-note">{s.note}</p>
         <p class="rail-contact">
-          <a href={`mailto:${site.email}`}>{site.email}</a><br />
-          <a href={site.linkedin}>LinkedIn</a>
+          <a href={`mailto:${s.email}`}>{s.email}</a><br />
+          <a href={s.linkedin}>LinkedIn</a>
         </p>
       </header>
       <main>
         <slot />
         <footer class="site-footer">
-          <a href={`mailto:${site.email}`}>{site.email}</a><br />
-          <a href={site.linkedin}>LinkedIn</a>
+          <a href={`mailto:${s.email}`}>{s.email}</a><br />
+          <a href={s.linkedin}>LinkedIn</a>
         </footer>
       </main>
     </div>

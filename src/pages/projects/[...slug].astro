@@ -1,10 +1,9 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { longDate } from '../../format';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('hearings', ({ data }) => !data.draft);
+  const entries = await getCollection('projects', ({ data }) => !data.draft);
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 
@@ -18,13 +17,17 @@ const d = entry.data;
     <h1>{d.title}</h1>
     <div class="factbox">
       <dl>
-        <dt>Committee</dt><dd>{d.committee}</dd>
-        <dt>Session</dt><dd>{d.session}</dd>
-        <dt>Date</dt><dd>{longDate(d.date)}</dd>
-        <dt>Witnesses</dt><dd>{d.witnesses}</dd>
-        <dt>Attendance</dt><dd>{d.attendance}</dd>
+        <dt>When</dt><dd>{d.period}</dd>
+        {d.stack && <><dt>Built with</dt><dd>{d.stack}</dd></>}
+        {d.status && <><dt>Status</dt><dd>{d.status}</dd></>}
       </dl>
     </div>
+    {d.image && (
+      <figure>
+        <img src={d.image} alt={d.imageCaption ? "" : d.title} />
+        {d.imageCaption && <figcaption>{d.imageCaption}</figcaption>}
+      </figure>
+    )}
     <div class="prose"><Content /></div>
   </article>
 </Base>

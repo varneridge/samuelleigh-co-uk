@@ -1,0 +1,7 @@
+/about / 301
+/cv / 301
+/work /experience 301
+/work/* /experience/:splat 301
+/hearings /writing 301
+/hearings/* /writing/:splat 301
+/cv.pdf /files/cv.pdf 301

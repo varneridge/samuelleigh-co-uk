@@ -70,9 +70,9 @@ draft except the work entries, so the site builds but publishes nothing unfinish
 
 ## Photos included
 
-- `public/images/rnli-helm.jpg` — the 3:2 crop, used as the header on the RNLI page
-- `public/images/rnli-card.jpg` — the 4:5 crop, spare
-- `public/images/headshot.jpg` — used on the About page
+- `public/images/rnli-helm.jpg`, the 3:2 crop, used as the header on the RNLI page
+- `public/images/rnli-card.jpg`, the 4:5 crop, spare
+- `public/images/headshot.jpg`, used on the About page
 
 Replace the headshot with a real photograph before the site goes live.
 
@@ -96,6 +96,24 @@ Defined in `src/styles/global.css` as custom properties.
 | `--shoal` | `#DCE6E4` | Fact boxes, pull quotes, rules |
 | `--foreshore` | `#E9E1CF` | The writing list only |
 | `--magenta` | `#A62C5F` | Links, current nav item, focus ring. Nothing else. |
+
+### Type scale
+
+Six steps, defined as custom properties at the top of `global.css`. Nothing sits between them,
+which is the whole point: if a new element needs a size, it takes one of these rather than
+inventing a seventh.
+
+| Token | Desktop | Mobile | Used for |
+| --- | --- | --- | --- |
+| `--fs-xs` | 13px | 13px | Figure captions, section labels, sidebar note |
+| `--fs-sm` | 15px | 14px | Dates, meta lines, organisation lines, fact boxes |
+| `--fs-md` | 17px | 16px | Bullets, list titles and summaries |
+| `--fs-lg` | 19px | 18px | Body prose, h3, CV entry titles |
+| `--fs-xl` | 22px | 20px | h2 and the opening paragraph |
+| `--fs-2xl` | 32px | 27px | h1 |
+
+Mobile shifts four of the six down one notch through a single override block, so the whole
+page scales together rather than element by element.
 
 Typefaces are Archivo (headings and interface) and Source Serif 4 (body), both under the
 SIL Open Font License and self-hosted through Fontsource, so nothing is fetched from

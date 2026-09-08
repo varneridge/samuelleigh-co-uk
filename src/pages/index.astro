@@ -1,66 +1,74 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import EntryList from '../components/EntryList.astro';
-import { site } from '../site';
+import CvSection from '../components/CvSection.astro';
 import { shortDate } from '../format';
+
+const intro = await getEntry('pages', 'intro');
+const s = (await getEntry('pages', 'settings'))!.data;
+const closing = await getEntry('pages', 'closing');
+const { Content: Closing } = await render(closing!);
+
+const toCv = (base: string) => (e: any) => ({
+  href: `/${base}/${e.id}`,
+  title: e.data.title,
+  period: e.data.period,
+  org: e.data.org,
+  bullets: e.data.bullets ?? []
+});
+
+const education = (await getCollection('education', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((e) => ({ href: '/education', title: e.data.title, period: e.data.period, org: e.data.org, bullets: e.data.bullets }));
+
+const experience = (await getCollection('experience', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(toCv('experience'));
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(toCv('projects'));
 
 const writing = (await getCollection('writing', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3)
+  .slice(0, 4)
   .map((e) => ({
     href: `/writing/${e.id}`,
     date: shortDate(e.data.date),
     title: e.data.title,
     summary: e.data.summary
   }));
-
-const hearings = (await getCollection('hearings', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 2)
-  .map((e) => ({
-    href: `/hearings/${e.id}`,
-    date: shortDate(e.data.date),
-    title: e.data.title,
-    summary: e.data.summary
-  }));
-
-const work = (await getCollection('work', ({ data }) => !data.draft))
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, 3)
-  .map((e) => ({
-    href: `/work/${e.id}`,
-    date: e.data.period,
-    title: e.data.title,
-    summary: e.data.summary
-  }));
 ---
 
-<Base title={site.name}>
-  <p class="lede">
-    I am a final-year International History student at LSE. I write about fiscal policy and
-    political risk, I sit in on Select Committee hearings and write up what I take from them,
-    and I am volunteer boat and shore crew with the RNLI at Littlestone.
-  </p>
+<Base title={s.name!} description="Samuel Leigh: final-year International History student at LSE. CV, writing, experience and projects.">
+  <p class="lede">{intro!.data.lede}</p>
+
+  <h2>{s.headingEducation}</h2>
+  <CvSection items={education} />
+  <p class="meta" style="margin-top:-0.8rem;"><a href="/education">Modules and societies in detail</a></p>
+
+  <h2>{s.headingExperience}</h2>
+  <CvSection items={experience} />
+  <p class="meta" style="margin-top:-0.8rem;"><a href="/experience">All experience in detail</a></p>
+
+  <h2>{s.headingProjects}</h2>
+  <CvSection items={projects} />
+  <p class="meta" style="margin-top:-0.8rem;"><a href="/projects">All projects in detail</a></p>
 
   {writing.length > 0 && (
     <>
-      <p class="section-label">Writing</p>
+      <h2>{s.headingWriting}</h2>
       <EntryList items={writing} tinted={true} />
+      <p class="meta" style="margin-top:-1.4rem;"><a href="/writing">All writing</a></p>
     </>
   )}
 
-  {hearings.length > 0 && (
-    <>
-      <p class="section-label">From the committee corridor</p>
-      <EntryList items={hearings} />
-    </>
-  )}
+  <div class="prose"><Closing /></div>
 
-  {work.length > 0 && (
-    <>
-      <p class="section-label">Work</p>
-      <EntryList items={work} />
-    </>
-  )}
+  <p class="meta" style="margin-top:2.4rem;">
+    {s.cv && <><a href={s.cv}>Download the CV as a PDF</a>{s.cvUpdated ? `, last updated ${s.cvUpdated}` : ''}. </>}
+    Or write to me at
+    <a href={`mailto:${s.email}`}>{s.email}</a>.
+  </p>
 </Base>

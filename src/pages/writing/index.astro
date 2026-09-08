@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import EntryList from '../../components/EntryList.astro';
 import { shortDate } from '../../format';
@@ -10,12 +10,14 @@ const items = (await getCollection('writing', ({ data }) => !data.draft))
     href: `/writing/${e.id}`,
     date: shortDate(e.data.date),
     title: e.data.title,
-    summary: e.data.summary
+    summary: e.data.summary,
+    thumbnail: e.data.thumbnail
   }));
+const page = (await getEntry('pages', 'writing-index'))!.data;
 ---
 
-<Base title="Writing" description="Essays on fiscal policy and public spending.">
-  <h1>Writing</h1>
-  <p class="meta">Essays, mostly on tax, spending and how policy survives contact with delivery.</p>
+<Base title={page.title!} description={page.lede}>
+  <h1>{page.title}</h1>
+  <p class="meta">{page.lede}</p>
   {items.length > 0 ? <EntryList items={items} tinted={true} /> : <p>No pieces are published yet.</p>}
 </Base>

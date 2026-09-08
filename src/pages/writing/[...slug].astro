@@ -10,14 +10,26 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const d = entry.data;
+const isHearing = Boolean(d.committee);
 ---
 
-<Base title={entry.data.title} description={entry.data.summary}>
+<Base title={d.title} description={d.summary}>
   <article>
-    <h1>{entry.data.title}</h1>
+    <h1>{d.title}</h1>
     <p class="meta">
-      {longDate(entry.data.date)}{entry.data.note ? ` · ${entry.data.note}` : ''}
+      {longDate(d.date)}{d.note ? ` · ${d.note}` : ''}
     </p>
+    {isHearing && (
+      <div class="factbox">
+        <dl>
+          <dt>Committee</dt><dd>{d.committee}</dd>
+          {d.session && <><dt>Session</dt><dd>{d.session}</dd></>}
+          {d.witnesses && <><dt>Witnesses</dt><dd>{d.witnesses}</dd></>}
+          {d.attendance && <><dt>Attendance</dt><dd>{d.attendance}</dd></>}
+        </dl>
+      </div>
+    )}
     <div class="prose"><Content /></div>
   </article>
 </Base>

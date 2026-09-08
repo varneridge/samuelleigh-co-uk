@@ -1,10 +1,14 @@
 ---
-title: Building an alumni programme from nothing
-period: "2024–26"
+title: Secretary
+period: 'Apr 2025 - 2026'
 order: 30
-summary: LSESU RAG had never contacted its alumni. I built the contact base and ran the programme.
-role: Charity Officer, then Secretary
-context: LSESU Raising and Giving, a student fundraising society with a committee of over forty.
+org: 'LSE Raising and Giving (RAG), London'
+summary: 'RAG had never contacted its alumni. I built the contact base and ran the programme.'
+role: 'Secretary; previously Charity Officer'
+context: 'A student fundraising society with a committee of over forty.'
+bullets:
+  - 'Built an alumni engagement programme from nothing, via LinkedIn and the university alumni relations team. Giving Tuesday fundraising grew from £536 to over £1,000 year on year.'
+  - 'Coordinated committee administration across a forty-plus member committee. Previously Charity Officer, contributing to a £14,000 fundraising total for partners including Safe Passage International.'
 ---
 
 I served as Charity Officer from October 2024 to April 2025 and then as Secretary until 2026.

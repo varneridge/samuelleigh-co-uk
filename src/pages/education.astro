@@ -1,0 +1,13 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const entry = await getEntry('pages', 'education-detail');
+const { Content } = await render(entry!);
+---
+
+<Base title="Education" description="Modules, societies and schooling in detail.">
+  <h1>Education</h1>
+  <p class="meta">{entry!.data.lede}</p>
+  <div class="prose"><Content /></div>
+</Base>

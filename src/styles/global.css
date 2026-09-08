@@ -6,7 +6,20 @@
   --foreshore: #E9E1CF;
   --magenta: #A62C5F;
   --rule: #DCE6E4;
-  --measure: 64ch;
+  /* One column width for everything, in rem so it does not shift with font size.
+     38rem is about 64 characters at the body size. */
+  --measure: 38rem;
+
+  /* Type scale. Six steps, used everywhere. Nothing sits between them. */
+  --fs-xs: 13px;    /* figcaptions, section labels */
+  --fs-sm: 15px;    /* dates, meta lines, organisation lines */
+  --fs-md: 17px;    /* bullets, list titles and summaries */
+  --fs-lg: 19px;    /* body prose */
+  --fs-xl: 22px;    /* h2 and the opening paragraph */
+  --fs-2xl: 32px;   /* h1 */
+
+  --sans: "Archivo Variable", system-ui, sans-serif;
+  --serif: "Source Serif 4 Variable", Georgia, serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -17,8 +30,8 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Source Serif 4 Variable", Georgia, serif;
-  font-size: 19px;
+  font-family: var(--serif);
+  font-size: var(--fs-lg);
   line-height: 1.6;
   font-synthesis-weight: none;
 }
@@ -34,9 +47,18 @@ body {
 
 .rail { position: sticky; top: 3rem; align-self: start; }
 
+.rail-photo {
+  width: 100%;
+  margin-top: 0.1rem;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 0.7rem;
+}
+
 .rail-name {
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 17px;
+  font-family: var(--sans);
+  font-size: var(--fs-md);
   font-weight: 600;
   letter-spacing: -0.012em;
   line-height: 1.2;
@@ -46,8 +68,8 @@ body {
 }
 
 .rail-place {
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
   color: var(--slate);
   margin: 2px 0 0;
 }
@@ -56,8 +78,8 @@ body {
   margin: 1.4rem 0 0;
   padding: 0;
   list-style: none;
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 14.5px;
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
   line-height: 2;
 }
 
@@ -67,8 +89,8 @@ body {
 
 .rail-note {
   margin: 1.6rem 0 0;
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
   line-height: 1.5;
   color: var(--slate);
   max-width: 22ch;
@@ -76,8 +98,8 @@ body {
 
 .rail-contact {
   margin: 1.6rem 0 0;
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
   line-height: 1.8;
 }
 
@@ -86,16 +108,16 @@ body {
 main { min-width: 0; }
 
 h1, h2, h3 {
-  font-family: "Archivo Variable", system-ui, sans-serif;
+  font-family: var(--sans);
   letter-spacing: -0.015em;
   line-height: 1.18;
   font-weight: 600;
   margin: 0 0 0.6rem;
 }
 
-h1 { font-size: 30px; }
-h2 { font-size: 19px; font-weight: 500; }
-h3 { font-size: 17px; font-weight: 500; }
+h1 { font-size: var(--fs-2xl); }
+h2 { font-size: var(--fs-xl); font-weight: 600; margin-top: 2.6rem; }
+h3 { font-size: var(--fs-lg); font-weight: 600; }
 
 p, ul, ol, blockquote { max-width: var(--measure); }
 p { margin: 0 0 1.1rem; }
@@ -105,16 +127,19 @@ a:hover { text-decoration-thickness: 2px; }
 
 :focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; }
 
+main > :first-child { margin-top: 0; }
+
+/* Trim the half-leading above the first line so it aligns with the top of the sidebar. */
 .lede {
-  font-size: 22px;
+  font-size: var(--fs-xl);
   line-height: 1.5;
-  max-width: 44ch;
-  margin: 0 0 2.4rem;
+  max-width: var(--measure);
+  margin: -0.28em 0 2.4rem;
 }
 
 .section-label {
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
   font-weight: 500;
   color: var(--slate);
   margin: 0 0 0.5rem;
@@ -142,8 +167,8 @@ a:hover { text-decoration-thickness: 2px; }
 
 .entry-date {
   flex: 0 0 56px;
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 12.5px;
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
   color: var(--slate);
   padding-top: 4px;
 }
@@ -152,9 +177,29 @@ a:hover { text-decoration-thickness: 2px; }
 
 .entry-body { min-width: 0; }
 
+.entry-thumb {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 72px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--shoal);
+  display: block;
+  margin-top: 2px;
+}
+
+.entry-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.entries.with-thumbs .entry { align-items: flex-start; }
+
 .entry-title {
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 15.5px;
+  font-family: var(--sans);
+  font-size: var(--fs-md);
   font-weight: 500;
   color: var(--ink);
   text-decoration: underline;
@@ -165,12 +210,19 @@ a:hover { text-decoration-thickness: 2px; }
 
 .entry-title:hover { color: var(--magenta); text-decoration-color: var(--magenta); }
 
+.entry-head {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: var(--fs-md);
+  font-weight: 500;
+}
+
 .entry-summary {
-  font-size: 15px;
+  font-size: var(--fs-md);
   line-height: 1.5;
   color: var(--slate);
   margin: 2px 0 0;
-  max-width: 58ch;
+  max-width: var(--measure);
 }
 
 .factbox {
@@ -179,8 +231,8 @@ a:hover { text-decoration-thickness: 2px; }
   padding: 0.9rem 1.1rem;
   margin: 0 0 2rem;
   max-width: var(--measure);
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 14.5px;
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
   line-height: 1.6;
   color: var(--ink);
 }
@@ -190,8 +242,8 @@ a:hover { text-decoration-thickness: 2px; }
 .factbox dd { margin: 0; }
 
 .meta {
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 13.5px;
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
   color: var(--slate);
   margin: 0 0 2rem;
 }
@@ -199,11 +251,11 @@ a:hover { text-decoration-thickness: 2px; }
 figure { margin: 2rem 0; max-width: 100%; }
 figure img { width: 100%; height: auto; border-radius: 6px; display: block; }
 figcaption {
-  font-family: "Archivo Variable", system-ui, sans-serif;
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
   color: var(--slate);
   margin-top: 0.5rem;
-  max-width: 60ch;
+  max-width: var(--measure);
 }
 
 blockquote {
@@ -211,13 +263,17 @@ blockquote {
   padding: 0.9rem 1.1rem;
   background: var(--shoal);
   border-radius: 6px;
-  font-size: 18px;
+  font-size: var(--fs-lg);
 }
 blockquote p:last-child { margin-bottom: 0; }
 
 .prose h2 { margin-top: 2.4rem; }
 .prose h3 { margin-top: 1.8rem; }
-.prose li { margin-bottom: 0.35rem; }
+.prose li { margin-bottom: 0.7rem; font-size: var(--fs-md); }
+.prose li > strong:first-child { display: block; }
+.prose ul { padding-left: 1.15rem; margin: 0.4rem 0 1.2rem; }
+.prose ul li::marker { color: var(--slate); }
+.prose h2 + p { margin-bottom: 0.3rem; }
 
 hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-width: var(--measure); }
 
@@ -230,6 +286,8 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
     padding: 2rem 1.25rem 4rem;
   }
   .rail { position: static; }
+  .rail-id { display: flex; gap: 0.9rem; align-items: center; }
+  .rail-photo { width: 68px; flex: 0 0 68px; margin-bottom: 0; }
   .rail-nav {
     display: flex;
     flex-wrap: wrap;
@@ -238,20 +296,32 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
     margin-top: 0.7rem;
   }
   .rail-note, .rail-contact { display: none; }
-  body { font-size: 18px; }
-  .lede { font-size: 19px; max-width: none; margin-bottom: 2rem; }
-  h1 { font-size: 25px; }
+  :root {
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
+    --fs-2xl: 27px;
+  }
+  .lede { margin-bottom: 1.8rem; }
 
   .entry { flex-direction: column; gap: 0; padding: 0.9rem 0; }
   .entry-date { flex: none; padding: 0 0 3px; }
-  .entry-summary { max-width: none; }
+  .entry-head {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 15.5px;
+  font-weight: 500;
+}
+
+.entry-summary { max-width: none; }
 
   .site-footer {
     display: block;
     margin-top: 3rem;
     padding-top: 1.2rem;
     border-top: 1px solid var(--rule);
-    font-family: "Archivo Variable", system-ui, sans-serif;
+    font-family: var(--sans);
     font-size: 14px;
     line-height: 1.9;
   }
@@ -260,4 +330,62 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+
+/* CV-style blocks on the home page */
+.cv-block { margin: 0 0 1.8rem; max-width: var(--measure); }
+
+.cv-entry { margin: 0 0 1.4rem; }
+
+.cv-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.cv-title {
+  font-family: var(--sans);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--slate);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.cv-title:hover { color: var(--magenta); text-decoration-color: var(--magenta); }
+.cv-title-plain { text-decoration: none; }
+
+.cv-period {
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.entry-date { font-variant-numeric: tabular-nums; }
+
+.cv-org {
+  font-size: var(--fs-sm);
+  color: var(--slate);
+  margin: 1px 0 0.4rem;
+  max-width: none;
+}
+
+.cv-bullets { margin: 0; padding-left: 1.15rem; }
+.cv-bullets li { margin-bottom: 0.35rem; font-size: var(--fs-md); line-height: 1.5; }
+.cv-bullets li::marker { color: var(--slate); }
+
+@media (max-width: 720px) {
+  .cv-head { flex-direction: column; gap: 0; }
+  .cv-period { white-space: normal; }
 }

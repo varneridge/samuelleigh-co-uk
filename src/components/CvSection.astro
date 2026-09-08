@@ -1,0 +1,32 @@
+---
+interface Item {
+  href?: string;
+  title: string;
+  period: string;
+  org?: string;
+  bullets: string[];
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="cv-block">
+  {items.map((item) => (
+    <article class="cv-entry">
+      <div class="cv-head">
+        {item.href ? <a class="cv-title" href={item.href}>{item.title}</a> : <span class="cv-title cv-title-plain">{item.title}</span>}
+        <span class="cv-period">{item.period}</span>
+      </div>
+      {item.org && <p class="cv-org">{item.org}</p>}
+      {item.bullets.length > 0 && (
+        <ul class="cv-bullets">
+          {item.bullets.map((b) => <li>{b}</li>)}
+        </ul>
+      )}
+    </article>
+  ))}
+</div>

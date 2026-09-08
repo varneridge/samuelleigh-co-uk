@@ -1,12 +1,11 @@
 # Sveltia CMS configuration.
-# Fill in the three CHANGE ME values below before this will work.
 # See the "Editing in the browser" section of README.md for the setup steps.
 
 backend:
   name: github
-  repo: CHANGE-ME-username/CHANGE-ME-repo
+  repo: varneridge/samuelleigh-co-uk
   branch: main
-  base_url: https://CHANGE-ME.workers.dev
+  base_url: https://sveltia-cms-auth.samuel-leigh147.workers.dev
 
 media_folder: public/images
 public_folder: /images
@@ -43,6 +42,30 @@ collections:
         widget: string
         required: false
         hint: Optional. Use this to say a piece began as coursework.
+      - name: thumbnail
+        label: Thumbnail
+        widget: image
+        required: false
+        hint: 'Card image shown in lists. Crop to 4:3, around 400x300 pixels.'
+      - name: committee
+        label: Committee
+        widget: string
+        required: false
+        hint: Hearing notes only. Leave blank for an ordinary article.
+      - name: session
+        label: Session
+        widget: string
+        required: false
+      - name: witnesses
+        label: Witnesses
+        widget: string
+        required: false
+      - name: attendance
+        label: Attendance
+        widget: select
+        required: false
+        options: ['In person', 'Watched online']
+        hint: Say "In person" only where you were in the room.
       - name: draft
         label: Draft
         widget: boolean
@@ -52,60 +75,11 @@ collections:
         label: Body
         widget: markdown
 
-  - name: hearings
-    label: Hearings
-    label_singular: Hearing note
-    description: Notes from Select Committee hearings.
-    folder: src/content/hearings
-    create: true
-    extension: md
-    format: frontmatter
-    slug: '{{slug}}'
-    summary: '{{title}}'
-    sortable_fields: [date, title]
-    fields:
-      - name: title
-        label: Title
-        widget: string
-        hint: The point you took from the session, not the session name.
-      - name: date
-        label: Date of the hearing
-        widget: datetime
-        date_format: YYYY-MM-DD
-        time_format: false
-        picker_utc: true
-      - name: committee
-        label: Committee
-        widget: string
-      - name: session
-        label: Session
-        widget: string
-        hint: Session title and reference, e.g. "The OBR: 15 Years On (HC 1583)".
-      - name: witnesses
-        label: Witnesses
-        widget: string
-      - name: attendance
-        label: Attendance
-        widget: select
-        options: ['In person', 'Watched online']
-        default: In person
-        hint: Say "attended" only where you were in the room.
-      - name: summary
-        label: One-line summary
-        widget: text
-      - name: draft
-        label: Draft
-        widget: boolean
-        default: true
-      - name: body
-        label: Body
-        widget: markdown
-
-  - name: work
-    label: Work
-    label_singular: Work entry
+  - name: experience
+    label: Experience
+    label_singular: Experience entry
     description: Things done in more detail than a CV allows.
-    folder: src/content/work
+    folder: src/content/experience
     create: true
     extension: md
     format: frontmatter
@@ -119,7 +93,7 @@ collections:
       - name: period
         label: Period
         widget: string
-        hint: Shown in the left column of lists, e.g. 2023– or 2026.
+        hint: Shown in the left column of lists, for example "2023-" or "2026".
       - name: order
         label: Order
         widget: number
@@ -129,6 +103,17 @@ collections:
       - name: summary
         label: One-line summary
         widget: text
+      - name: org
+        label: Organisation line
+        widget: string
+        required: false
+        hint: 'The second line under the title, as it appears on your CV.'
+      - name: bullets
+        label: CV bullet points
+        widget: list
+        required: false
+        field: {name: point, label: Point, widget: text}
+        hint: 'These appear on the home page under this entry. Keep them close to your CV wording.'
       - name: role
         label: Role
         widget: string
@@ -137,6 +122,117 @@ collections:
         label: Context
         widget: string
         hint: Fact box. One line of background.
+      - name: thumbnail
+        label: Thumbnail
+        widget: image
+        required: false
+        hint: 'Small card image shown in lists. Crop to 4:3, around 400x300 pixels.'
+      - name: image
+        label: Header image
+        widget: image
+        required: false
+        hint: 'Large image at the top of the page. Crop to 3:2.'
+      - name: imageCaption
+        label: Image caption
+        widget: string
+        required: false
+      - name: draft
+        label: Draft
+        widget: boolean
+        default: false
+      - name: body
+        label: Body
+        widget: markdown
+
+  - name: education
+    label: Education
+    label_singular: Institution
+    folder: src/content/education
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [order, title]
+    fields:
+      - name: title
+        label: Institution
+        widget: string
+      - name: period
+        label: Dates
+        widget: string
+        hint: 'CV format, for example Sep 2024 - Jun 2027.'
+      - name: order
+        label: Order
+        widget: number
+        value_type: int
+        default: 50
+      - name: org
+        label: Qualification line
+        widget: string
+        required: false
+        hint: 'The qualification, not the location. Put the town in the institution name if it is needed.'
+      - name: bullets
+        label: Bullet points
+        widget: list
+        required: false
+        field: {name: point, label: Point, widget: text}
+      - name: draft
+        label: Draft
+        widget: boolean
+        default: false
+
+  - name: projects
+    label: Projects
+    label_singular: Project
+    description: Things built rather than written.
+    folder: src/content/projects
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [order, title]
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: period
+        label: Period
+        widget: string
+      - name: order
+        label: Order
+        widget: number
+        value_type: int
+        default: 50
+      - name: summary
+        label: One-line summary
+        widget: text
+      - name: org
+        label: Organisation line
+        widget: string
+        required: false
+        hint: 'The second line under the title, as it appears on your CV.'
+      - name: bullets
+        label: CV bullet points
+        widget: list
+        required: false
+        field: {name: point, label: Point, widget: text}
+        hint: 'These appear on the home page under this entry. Keep them close to your CV wording.'
+      - name: stack
+        label: Built with
+        widget: string
+        required: false
+      - name: status
+        label: Status
+        widget: string
+        required: false
+        hint: 'For example Prototype, Complete, or In progress. Be honest about this.'
+      - name: thumbnail
+        label: Thumbnail
+        widget: image
+        required: false
+        hint: 'Card image. Crop to 4:3, around 400x300 pixels.'
       - name: image
         label: Header image
         widget: image
@@ -152,3 +248,80 @@ collections:
       - name: body
         label: Body
         widget: markdown
+
+  - name: pages
+    label: Home page
+    files:
+      - name: settings
+        label: Site details and sidebar
+        file: src/content/pages/settings.md
+        fields:
+          - {name: name, label: Your name, widget: string}
+          - {name: place, label: Location line, widget: string}
+          - {name: email, label: Email, widget: string}
+          - {name: linkedin, label: LinkedIn URL, widget: string}
+          - {name: note, label: Sidebar note, widget: text, hint: 'One line, shown on every page. Under about 20 words.'}
+          - {name: photo, label: Sidebar photograph, widget: image}
+          - name: cv
+            label: CV (PDF)
+            widget: file
+            required: false
+            media_folder: '/public/files'
+            public_folder: '/files'
+            hint: 'Upload a new PDF to replace the download link. Keep it plain: no tables, columns or text boxes, so applicant tracking software can parse it.'
+          - {name: cvUpdated, label: CV last updated, widget: string, required: false, hint: 'For example September 2026.'}
+          - {name: navAbout, label: 'Nav label: home', widget: string}
+          - {name: navEducation, label: 'Nav label: education', widget: string}
+          - {name: navWriting, label: 'Nav label: writing', widget: string}
+          - {name: navExperience, label: 'Nav label: experience', widget: string}
+          - {name: navProjects, label: 'Nav label: projects', widget: string}
+          - {name: headingEducation, label: 'Home heading: education', widget: string}
+          - {name: headingExperience, label: 'Home heading: experience', widget: string}
+          - {name: headingProjects, label: 'Home heading: projects', widget: string}
+          - {name: headingWriting, label: 'Home heading: writing', widget: string}
+      - name: writing-index
+        label: Writing page heading
+        file: src/content/pages/writing-index.md
+        fields:
+          - {name: title, label: Heading, widget: string}
+          - {name: lede, label: Intro line, widget: text}
+      - name: experience-index
+        label: Experience page heading
+        file: src/content/pages/experience-index.md
+        fields:
+          - {name: title, label: Heading, widget: string}
+          - {name: lede, label: Intro line, widget: text}
+      - name: projects-index
+        label: Projects page heading
+        file: src/content/pages/projects-index.md
+        fields:
+          - {name: title, label: Heading, widget: string}
+          - {name: lede, label: Intro line, widget: text}
+      - name: intro
+        label: Opening and introduction
+        file: src/content/pages/intro.md
+        fields:
+          - name: lede
+            label: Opening paragraph
+            widget: text
+            hint: The first thing anyone reads. Three sentences at most.
+          - name: body
+            label: Introduction
+            widget: markdown
+      - name: education-detail
+        label: Education page
+        file: src/content/pages/education-detail.md
+        fields:
+          - {name: title, label: Heading, widget: string}
+          - {name: lede, label: Intro line, widget: text}
+          - {name: body, label: Body, widget: markdown}
+      - name: closing
+        label: Parliamentary engagement, skills, additional
+        file: src/content/pages/closing.md
+        fields:
+          - name: title
+            label: Section heading
+            widget: string
+          - name: body
+            label: Body
+            widget: markdown
