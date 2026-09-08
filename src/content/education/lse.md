@@ -1,12 +1,13 @@
 ---
 title: London School of Economics and Political Science
-period: 'Sep 2024 - Jun 2027'
+period: Sep 2024 - Jun 2027
 order: 10
-org: 'BA International History, on track for a First'
-logo: /images/placeholder-lse.png
+org: BA International History, on track for a First
+logo: /images/pasted-image-1788902249477.png
 bullets:
-  - 'Foreign policy, the Cold War and international organisations, with economics alongside. Dissertation in progress.'
-  - 'Researcher, LSESU Economics Society. Secretary, LSESU RAG. Treasurer, Pickleball Society.'
+  - Foreign policy, the Cold War and international organisations, with economics alongside. Dissertation in progress.
+  - Researcher, LSESU Economics Society. Secretary, LSESU RAG. Treasurer, Pickleball Society.
+draft: false
 ---
 
 I chose the degree for the international side rather than the historical one. Most of what I
