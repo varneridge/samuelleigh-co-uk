@@ -4,9 +4,9 @@
 
 backend:
   name: github
-  repo: CHANGE-ME-username/CHANGE-ME-repo
+  repo: varneridge/samuelleigh-co-uk
   branch: main
-  base_url: https://CHANGE-ME.workers.dev
+  base_url: https://sveltia-cms-auth.samuel-leigh147.workers.dev/
 
 media_folder: public/images
 public_folder: /images
