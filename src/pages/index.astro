@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import EntryList from '../components/EntryList.astro';
+import { site } from '../site';
+import { shortDate } from '../format';
+
+const writing = (await getCollection('writing', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3)
+  .map((e) => ({
+    href: `/writing/${e.id}`,
+    date: shortDate(e.data.date),
+    title: e.data.title,
+    summary: e.data.summary
+  }));
+
+const hearings = (await getCollection('hearings', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 2)
+  .map((e) => ({
+    href: `/hearings/${e.id}`,
+    date: shortDate(e.data.date),
+    title: e.data.title,
+    summary: e.data.summary
+  }));
+
+const work = (await getCollection('work', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3)
+  .map((e) => ({
+    href: `/work/${e.id}`,
+    date: e.data.period,
+    title: e.data.title,
+    summary: e.data.summary
+  }));
+---
+
+<Base title={site.name}>
+  <p class="lede">
+    I am a final-year International History student at LSE. I write about fiscal policy and
+    political risk, I sit in on Select Committee hearings and write up what I take from them,
+    and I am volunteer boat and shore crew with the RNLI at Littlestone.
+  </p>
+
+  {writing.length > 0 && (
+    <>
+      <p class="section-label">Writing</p>
+      <EntryList items={writing} tinted={true} />
+    </>
+  )}
+
+  {hearings.length > 0 && (
+    <>
+      <p class="section-label">From the committee corridor</p>
+      <EntryList items={hearings} />
+    </>
+  )}
+
+  {work.length > 0 && (
+    <>
+      <p class="section-label">Work</p>
+      <EntryList items={work} />
+    </>
+  )}
+</Base>

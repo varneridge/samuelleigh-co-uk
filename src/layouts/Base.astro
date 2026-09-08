@@ -1,0 +1,73 @@
+---
+import '@fontsource-variable/archivo';
+import '@fontsource-variable/source-serif-4';
+import '../styles/global.css';
+import { site } from '../site';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = `${site.name}: writing and work.` } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/writing', label: 'Writing' },
+  { href: '/hearings', label: 'Hearings' },
+  { href: '/work', label: 'Work' },
+  { href: '/about', label: 'About' },
+  { href: '/cv', label: 'CV' }
+];
+
+const isCurrent = (href: string) =>
+  href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title === site.name ? title : `${title} — ${site.name}`}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="rail">
+        <a class="rail-name" href="/">{site.name}</a>
+        <p class="rail-place">{site.place}</p>
+        <nav aria-label="Main">
+          <ul class="rail-nav">
+            {nav.map((item) => (
+              <li>
+                <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <p class="rail-note">{site.note}</p>
+        <p class="rail-contact">
+          <a href={`mailto:${site.email}`}>{site.email}</a><br />
+          <a href={site.linkedin}>LinkedIn</a>
+        </p>
+      </header>
+      <main>
+        <slot />
+        <footer class="site-footer">
+          <a href={`mailto:${site.email}`}>{site.email}</a><br />
+          <a href={site.linkedin}>LinkedIn</a>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

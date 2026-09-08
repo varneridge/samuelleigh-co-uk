@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+---
+
+<Base title="About" description="Samuel Leigh, final-year International History student at LSE.">
+  <h1>About</h1>
+
+  <figure style="max-width: 280px;">
+    <img src="/images/headshot.jpg" alt="Samuel Leigh" />
+  </figure>
+
+  <p>
+    I am in my final year of a BA in International History at LSE, most interested in foreign
+    policy, fiscal policy and political risk. The degree is not a quantitative one, but I have
+    a quantitative side to it: A-Level Maths and Further Maths, a First in Microeconomics, and
+    a research project on corruption and foreign direct investment that I am currently
+    designing.
+  </p>
+
+  <p>
+    Outside the degree I am volunteer boat and shore crew with the RNLI at Littlestone
+    Lifeboat Station in Kent, which my family has been involved with since 1967. I am also
+    inducted at Tower Lifeboat Station in London so that I can keep crewing during term. I
+    have served as Charity Officer and then Secretary of LSESU RAG, on a committee of over
+    forty.
+  </p>
+
+  <p>
+    I read the FT daily and have done since I was thirteen, and I go and sit in on Select
+    Committee hearings in Parliament, which is where a lot of what I write starts. Those notes
+    are <a href="/hearings">here</a>.
+  </p>
+
+  <p>
+    I am looking for a graduate role starting in 2027, in policy or political risk advisory, or
+    somewhere adjacent in research, consulting or finance. If any of this is useful to you,
+    write to me at <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+</Base>

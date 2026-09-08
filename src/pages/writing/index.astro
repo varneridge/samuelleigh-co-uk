@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import EntryList from '../../components/EntryList.astro';
+import { shortDate } from '../../format';
+
+const items = (await getCollection('writing', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((e) => ({
+    href: `/writing/${e.id}`,
+    date: shortDate(e.data.date),
+    title: e.data.title,
+    summary: e.data.summary
+  }));
+---
+
+<Base title="Writing" description="Essays on fiscal policy and public spending.">
+  <h1>Writing</h1>
+  <p class="meta">Essays, mostly on tax, spending and how policy survives contact with delivery.</p>
+  {items.length > 0 ? <EntryList items={items} tinted={true} /> : <p>No pieces are published yet.</p>}
+</Base>

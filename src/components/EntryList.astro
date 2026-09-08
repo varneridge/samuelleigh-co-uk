@@ -1,0 +1,27 @@
+---
+interface Item {
+  href: string;
+  date: string;
+  title: string;
+  summary: string;
+}
+
+interface Props {
+  items: Item[];
+  tinted?: boolean;
+}
+
+const { items, tinted = false } = Astro.props;
+---
+
+<div class={tinted ? 'entries tinted' : 'entries'}>
+  {items.map((item) => (
+    <article class="entry">
+      <div class="entry-date">{item.date}</div>
+      <div class="entry-body">
+        <a class="entry-title" href={item.href}>{item.title}</a>
+        <p class="entry-summary">{item.summary}</p>
+      </div>
+    </article>
+  ))}
+</div>

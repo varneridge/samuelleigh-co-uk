@@ -1,0 +1,154 @@
+# Sveltia CMS configuration.
+# Fill in the three CHANGE ME values below before this will work.
+# See the "Editing in the browser" section of README.md for the setup steps.
+
+backend:
+  name: github
+  repo: CHANGE-ME-username/CHANGE-ME-repo
+  branch: main
+  base_url: https://CHANGE-ME.workers.dev
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: writing
+    label: Writing
+    label_singular: Article
+    description: Essays and articles. New pieces start as drafts.
+    folder: src/content/writing
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        hint: Write it as something a person might click, not as an essay question.
+      - name: date
+        label: Date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+      - name: summary
+        label: One-line summary
+        widget: text
+        hint: Shown under the title in lists. Keep it under about 20 words.
+      - name: note
+        label: Note
+        widget: string
+        required: false
+        hint: Optional. Use this to say a piece began as coursework.
+      - name: draft
+        label: Draft
+        widget: boolean
+        default: true
+        hint: Leave on until the piece is finished. Drafts do not appear on the site.
+      - name: body
+        label: Body
+        widget: markdown
+
+  - name: hearings
+    label: Hearings
+    label_singular: Hearing note
+    description: Notes from Select Committee hearings.
+    folder: src/content/hearings
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        hint: The point you took from the session, not the session name.
+      - name: date
+        label: Date of the hearing
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+      - name: committee
+        label: Committee
+        widget: string
+      - name: session
+        label: Session
+        widget: string
+        hint: Session title and reference, e.g. "The OBR: 15 Years On (HC 1583)".
+      - name: witnesses
+        label: Witnesses
+        widget: string
+      - name: attendance
+        label: Attendance
+        widget: select
+        options: ['In person', 'Watched online']
+        default: In person
+        hint: Say "attended" only where you were in the room.
+      - name: summary
+        label: One-line summary
+        widget: text
+      - name: draft
+        label: Draft
+        widget: boolean
+        default: true
+      - name: body
+        label: Body
+        widget: markdown
+
+  - name: work
+    label: Work
+    label_singular: Work entry
+    description: Things done in more detail than a CV allows.
+    folder: src/content/work
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [order, title]
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: period
+        label: Period
+        widget: string
+        hint: Shown in the left column of lists, e.g. 2023– or 2026.
+      - name: order
+        label: Order
+        widget: number
+        value_type: int
+        default: 50
+        hint: Position on the Work page. Lower numbers come first.
+      - name: summary
+        label: One-line summary
+        widget: text
+      - name: role
+        label: Role
+        widget: string
+        hint: Fact box. Be precise; this is the easiest thing to overclaim.
+      - name: context
+        label: Context
+        widget: string
+        hint: Fact box. One line of background.
+      - name: image
+        label: Header image
+        widget: image
+        required: false
+      - name: imageCaption
+        label: Image caption
+        widget: string
+        required: false
+      - name: draft
+        label: Draft
+        widget: boolean
+        default: false
+      - name: body
+        label: Body
+        widget: markdown

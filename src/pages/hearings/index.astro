@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import EntryList from '../../components/EntryList.astro';
+import { shortDate } from '../../format';
+
+const items = (await getCollection('hearings', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((e) => ({
+    href: `/hearings/${e.id}`,
+    date: shortDate(e.data.date),
+    title: e.data.title,
+    summary: e.data.summary
+  }));
+---
+
+<Base title="Hearings" description="Notes from Select Committee hearings in Parliament.">
+  <h1>From the committee corridor</h1>
+  <p class="meta">
+    Notes from Select Committee hearings, written up afterwards from the public transcript and
+    my own notes. These are my reading of what was said, not a record of proceedings.
+  </p>
+  {items.length > 0 ? <EntryList items={items} /> : <p>No notes are published yet.</p>}
+</Base>
