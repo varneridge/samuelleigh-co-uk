@@ -1,8 +1,9 @@
 ---
-title: Volunteer Boat and Shore Crew
-period: 'Sep 2023 - Present'
+title: Volunteer boat and shore crew, RNLI
+period: '2023-present'
 order: 20
 org: 'Royal National Lifeboat Institution, Littlestone Lifeboat Station, Kent; also inducted at Tower Lifeboat Station, London'
+logo: /images/placeholder-rnli.png
 summary: 'Search and rescue callouts, and what they teach you about acting on incomplete information.'
 role: Volunteer boat and shore crew
 context: 'Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).'
@@ -57,23 +58,22 @@ public thought might be in difficulty. Most of those turn out to be nothing. A f
 extremely serious, and you cannot tell which is which until you arrive, so every tasking is
 treated the same way.
 
-## What I have contributed
+## What I Have Contributed
 
-**Navigation routes.**
-The station's navigation system had capacity nobody was using. I programmed pre-plotted routes
-to the locations we are most often tasked to, which cut launch preparation from roughly two
-minutes to thirty seconds at no cost. It is now standard practice at the station, including a
-version with hazards marked in.
+Navigation routes. The station's navigation system had capacity nobody was using. I programmed
+pre-plotted routes to the locations we are most often tasked to, which cut launch preparation
+from roughly two minutes to thirty seconds at no cost. It is now standard practice at the
+station, including a version with hazards marked in.
 
-**Training sessions.**
-Travel and recovery time were eating into hands-on practice, so I proposed lengthening sessions
-from ninety minutes to three hours. The senior helm trialled and endorsed it, and the longer
-format is now standard for complex exercises, with ninety-minute slots kept for simple drills.
+Training sessions. Travel and recovery time were eating into hands-on practice, so I proposed
+lengthening sessions from ninety minutes to three hours. The senior helm trialled and endorsed
+it, and the longer format is now standard for complex exercises, with ninety-minute slots kept
+for simple drills.
 
 ## On the radio
 
-I was interviewed live on BBC Radio Kent about my first callout and about maritime safety, which
-meant turning technical language into something that works for a general audience, and balancing
-an account of my own experience against getting the "float to live" water safety message in. It
-did a lot for my confidence speaking publicly, which is something I have been working on over
-the past year.
+I was interviewed live on BBC Radio Kent about my experience on my first call out and maritime
+safety, which meant explaining technical language into something that works for a general
+audience, and balancing describing my experiences with getting the "float to live" water safety
+message in. This really helped boost my confidence speaking publicly, which is something I have
+been working on over the last year.

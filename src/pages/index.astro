@@ -15,12 +15,13 @@ const toCv = (base: string) => (e: any) => ({
   title: e.data.title,
   period: e.data.period,
   org: e.data.org,
+  logo: e.data.logo,
   bullets: e.data.bullets ?? []
 });
 
 const education = (await getCollection('education', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
-  .map((e) => ({ href: '/education', title: e.data.title, period: e.data.period, org: e.data.org, bullets: e.data.bullets }));
+  .map((e) => ({ href: '/education', title: e.data.title, period: e.data.period, org: e.data.org, logo: e.data.logo, bullets: e.data.bullets }));
 
 const experience = (await getCollection('experience', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)

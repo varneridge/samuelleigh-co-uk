@@ -105,12 +105,15 @@ inventing a seventh.
 
 | Token | Desktop | Mobile | Used for |
 | --- | --- | --- | --- |
-| `--fs-xs` | 13px | 13px | Figure captions, section labels, sidebar note |
-| `--fs-sm` | 15px | 14px | Dates, meta lines, organisation lines, fact boxes |
-| `--fs-md` | 17px | 16px | Bullets, list titles and summaries |
-| `--fs-lg` | 19px | 18px | Body prose, h3, CV entry titles |
-| `--fs-xl` | 22px | 20px | h2 and the opening paragraph |
-| `--fs-2xl` | 32px | 27px | h1 |
+| `--fs-xs` | 12px | 12px | Figure captions, section labels, sidebar note |
+| `--fs-sm` | 13.5px | 13px | Dates, meta lines, organisation lines, fact boxes |
+| `--fs-md` | 15px | 14.5px | Bullets, list titles and summaries |
+| `--fs-lg` | 17px | 16px | Body prose, h3, CV entry titles |
+| `--fs-xl` | 19px | 18px | h2 and the opening paragraph |
+| `--fs-2xl` | 27px | 24px | h1 |
+
+Body text is 17px, which is roughly what the FT sets its article text at. The column is 36rem,
+about 68 characters at that size.
 
 Mobile shifts four of the six down one notch through a single override block, so the whole
 page scales together rather than element by element.

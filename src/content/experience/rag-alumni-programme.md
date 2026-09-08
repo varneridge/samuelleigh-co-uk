@@ -3,6 +3,7 @@ title: Secretary
 period: 'Apr 2025 - 2026'
 order: 30
 org: 'LSE Raising and Giving (RAG), London'
+logo: /images/placeholder-rag.png
 summary: 'RAG had never contacted its alumni. I built the contact base and ran the programme.'
 role: 'Secretary; previously Charity Officer'
 context: 'A student fundraising society with a committee of over forty.'

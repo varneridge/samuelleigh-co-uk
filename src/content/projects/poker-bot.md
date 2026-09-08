@@ -3,6 +3,7 @@ title: Poker Bot
 period: 'June 2026'
 order: 10
 org: 'Fullhouse Poker Bot Hackathon, sponsored by Quadrature Capital, London'
+logo: /images/placeholder-fullhouse.png
 summary: "Finalist in the UK's first inter-university poker bot competition. The hard part was the testing."
 stack: 'Monte Carlo equity estimation, Bayesian opponent modelling'
 status: Complete

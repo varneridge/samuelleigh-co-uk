@@ -3,6 +3,7 @@ title: Student Consultant
 period: 'July 2026'
 order: 10
 org: 'Missang Advisory, London. Live client project via the LSE Skills Accelerator.'
+logo: /images/placeholder-missang.png
 summary: "A comparative policy report on the UK's missing framework for minerals partnerships with Africa."
 role: 'Student consultant, in a team'
 context: 'Three-week live-client project for a Westminster geostrategy and critical minerals advisory.'

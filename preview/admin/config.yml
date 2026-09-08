@@ -108,6 +108,11 @@ collections:
         widget: string
         required: false
         hint: 'The second line under the title, as it appears on your CV.'
+      - name: logo
+        label: Logo
+        widget: image
+        required: false
+        hint: 'Small square mark shown beside the title. A PNG or SVG with a transparent background works best, around 128 pixels.'
       - name: bullets
         label: CV bullet points
         widget: list
@@ -172,6 +177,11 @@ collections:
         widget: string
         required: false
         hint: 'The qualification, not the location. Put the town in the institution name if it is needed.'
+      - name: logo
+        label: Logo
+        widget: image
+        required: false
+        hint: 'Small square mark shown beside the title. A PNG or SVG with a transparent background works best, around 128 pixels.'
       - name: bullets
         label: Bullet points
         widget: list
@@ -181,6 +191,9 @@ collections:
         label: Draft
         widget: boolean
         default: false
+      - name: body
+        label: Detail (shown on the Education page)
+        widget: markdown
 
   - name: projects
     label: Projects
@@ -213,6 +226,11 @@ collections:
         widget: string
         required: false
         hint: 'The second line under the title, as it appears on your CV.'
+      - name: logo
+        label: Logo
+        widget: image
+        required: false
+        hint: 'Small square mark shown beside the title. A PNG or SVG with a transparent background works best, around 128 pixels.'
       - name: bullets
         label: CV bullet points
         widget: list
@@ -314,7 +332,6 @@ collections:
         fields:
           - {name: title, label: Heading, widget: string}
           - {name: lede, label: Intro line, widget: text}
-          - {name: body, label: Body, widget: markdown}
       - name: closing
         label: Parliamentary engagement, skills, additional
         file: src/content/pages/closing.md

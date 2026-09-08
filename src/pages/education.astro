@@ -1,13 +1,30 @@
 ---
-import { getEntry, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 
-const entry = await getEntry('pages', 'education-detail');
-const { Content } = await render(entry!);
+const page = (await getEntry('pages', 'education-detail'))!.data;
+
+const entries = (await getCollection('education', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const rendered = await Promise.all(
+  entries.map(async (e) => ({ data: e.data, Content: (await render(e)).Content }))
+);
 ---
 
-<Base title="Education" description="Modules, societies and schooling in detail.">
-  <h1>Education</h1>
-  <p class="meta">{entry!.data.lede}</p>
-  <div class="prose"><Content /></div>
+<Base title={page.title!} description={page.lede}>
+  <h1>{page.title}</h1>
+  <p class="meta">{page.lede}</p>
+
+  {rendered.map(({ data, Content }) => (
+    <section class="cv-entry inst">
+      <div class="cv-head">
+        {data.logo && <span class="cv-logo"><img src={data.logo} alt="" loading="lazy" /></span>}
+        <span class="cv-title cv-title-plain">{data.title}</span>
+        <span class="cv-period">{data.period}</span>
+      </div>
+      {data.org && <p class="cv-org">{data.org}</p>}
+      <div class="prose"><Content /></div>
+    </section>
+  ))}
 </Base>

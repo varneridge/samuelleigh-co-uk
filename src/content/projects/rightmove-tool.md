@@ -3,6 +3,7 @@ title: Rightmove Property Analysis Tool
 period: '2025'
 order: 20
 org: 'A prototype rather than an enterprise tool'
+logo: /images/placeholder-rightmove.png
 summary: 'A scraper and weighted scoring engine for the fields buried in the small print.'
 stack: 'Python, TfL API, Excel output'
 status: Prototype

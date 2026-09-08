@@ -28,6 +28,7 @@ const experience = defineCollection({
     role: z.string(),
     context: z.string(),
     org: z.string().optional(),
+    logo: z.string().optional(),
     bullets: z.array(z.string()).default([]),
     image: z.string().optional(),
     imageCaption: z.string().optional(),
@@ -43,6 +44,7 @@ const education = defineCollection({
     period: z.string(),
     order: z.number().default(50),
     org: z.string().optional(),
+    logo: z.string().optional(),
     bullets: z.array(z.string()).default([]),
     draft: z.boolean().default(false)
   })
@@ -58,6 +60,7 @@ const projects = defineCollection({
     stack: z.string().optional(),
     status: z.string().optional(),
     org: z.string().optional(),
+    logo: z.string().optional(),
     bullets: z.array(z.string()).default([]),
     thumbnail: z.string().optional(),
     image: z.string().optional(),

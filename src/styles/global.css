@@ -8,15 +8,15 @@
   --rule: #DCE6E4;
   /* One column width for everything, in rem so it does not shift with font size.
      38rem is about 64 characters at the body size. */
-  --measure: 38rem;
+  --measure: 36rem;
 
   /* Type scale. Six steps, used everywhere. Nothing sits between them. */
-  --fs-xs: 13px;    /* figcaptions, section labels */
-  --fs-sm: 15px;    /* dates, meta lines, organisation lines */
-  --fs-md: 17px;    /* bullets, list titles and summaries */
-  --fs-lg: 19px;    /* body prose */
-  --fs-xl: 22px;    /* h2 and the opening paragraph */
-  --fs-2xl: 32px;   /* h1 */
+  --fs-xs: 12px;    /* figcaptions, section labels */
+  --fs-sm: 13.5px;  /* dates, meta lines, organisation lines */
+  --fs-md: 15px;    /* bullets, list titles and summaries */
+  --fs-lg: 17px;    /* body prose */
+  --fs-xl: 19px;    /* h2 and the opening paragraph */
+  --fs-2xl: 27px;   /* h1 */
 
   --sans: "Archivo Variable", system-ui, sans-serif;
   --serif: "Source Serif 4 Variable", Georgia, serif;
@@ -32,17 +32,17 @@ body {
   color: var(--ink);
   font-family: var(--serif);
   font-size: var(--fs-lg);
-  line-height: 1.6;
+  line-height: 1.52;
   font-synthesis-weight: none;
 }
 
 .page {
-  max-width: 940px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 6rem;
+  padding: 2.6rem 1.5rem 5rem;
   display: grid;
-  grid-template-columns: 168px minmax(0, 1fr);
-  gap: 3.5rem;
+  grid-template-columns: 156px minmax(0, 1fr);
+  gap: 3rem;
 }
 
 .rail { position: sticky; top: 3rem; align-self: start; }
@@ -116,11 +116,11 @@ h1, h2, h3 {
 }
 
 h1 { font-size: var(--fs-2xl); }
-h2 { font-size: var(--fs-xl); font-weight: 600; margin-top: 2.6rem; }
+h2 { font-size: var(--fs-xl); font-weight: 600; margin-top: 2rem; }
 h3 { font-size: var(--fs-lg); font-weight: 600; }
 
 p, ul, ol, blockquote { max-width: var(--measure); }
-p { margin: 0 0 1.1rem; }
+p { margin: 0 0 0.85rem; }
 
 a { color: var(--magenta); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
@@ -132,9 +132,9 @@ main > :first-child { margin-top: 0; }
 /* Trim the half-leading above the first line so it aligns with the top of the sidebar. */
 .lede {
   font-size: var(--fs-xl);
-  line-height: 1.5;
+  line-height: 1.45;
   max-width: var(--measure);
-  margin: -0.28em 0 2.4rem;
+  margin: -0.24em 0 1.8rem;
 }
 
 .section-label {
@@ -156,7 +156,7 @@ main > :first-child { margin-top: 0; }
 .entry {
   display: flex;
   gap: 1rem;
-  padding: 0.75rem 0;
+  padding: 0.6rem 0;
   border-top: 1px solid var(--rule);
 }
 
@@ -177,10 +177,12 @@ main > :first-child { margin-top: 0; }
 
 .entry-body { min-width: 0; }
 
+/* Fixed 4:3 box. object-fit: cover never stretches, it crops, so a 4:3
+   source is shown whole and anything else is trimmed rather than squashed. */
 .entry-thumb {
-  flex: 0 0 96px;
-  width: 96px;
-  height: 72px;
+  flex: 0 0 104px;
+  width: 104px;
+  aspect-ratio: 4 / 3;
   border-radius: 4px;
   overflow: hidden;
   background: var(--shoal);
@@ -219,7 +221,7 @@ main > :first-child { margin-top: 0; }
 
 .entry-summary {
   font-size: var(--fs-md);
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--slate);
   margin: 2px 0 0;
   max-width: var(--measure);
@@ -269,9 +271,9 @@ blockquote p:last-child { margin-bottom: 0; }
 
 .prose h2 { margin-top: 2.4rem; }
 .prose h3 { margin-top: 1.8rem; }
-.prose li { margin-bottom: 0.7rem; font-size: var(--fs-md); }
+.prose li { margin-bottom: 0.5rem; font-size: var(--fs-md); line-height: 1.45; }
 .prose li > strong:first-child { display: block; }
-.prose ul { padding-left: 1.15rem; margin: 0.4rem 0 1.2rem; }
+.prose ul { padding-left: 1.05rem; margin: 0.3rem 0 0.9rem; }
 .prose ul li::marker { color: var(--slate); }
 .prose h2 + p { margin-bottom: 0.3rem; }
 
@@ -280,11 +282,20 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
 .site-footer { display: none; }
 
 @media (max-width: 720px) {
+  :root {
+    --fs-sm: 13px;
+    --fs-md: 14.5px;
+    --fs-lg: 16px;
+    --fs-xl: 18px;
+    --fs-2xl: 24px;
+  }
+
   .page {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem 1.25rem 4rem;
   }
+
   .rail { position: static; }
   .rail-id { display: flex; gap: 0.9rem; align-items: center; }
   .rail-photo { width: 68px; flex: 0 0 68px; margin-bottom: 0; }
@@ -296,25 +307,18 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
     margin-top: 0.7rem;
   }
   .rail-note, .rail-contact { display: none; }
-  :root {
-    --fs-sm: 14px;
-    --fs-md: 16px;
-    --fs-lg: 18px;
-    --fs-xl: 20px;
-    --fs-2xl: 27px;
-  }
+
   .lede { margin-bottom: 1.8rem; }
 
   .entry { flex-direction: column; gap: 0; padding: 0.9rem 0; }
   .entry-date { flex: none; padding: 0 0 3px; }
-  .entry-head {
-  margin: 0;
-  font-family: var(--sans);
-  font-size: 15.5px;
-  font-weight: 500;
-}
+  .entry-summary { max-width: none; }
+  .entry-thumb { width: 100%; flex: none; margin: 0 0 0.7rem; }
 
-.entry-summary { max-width: none; }
+  .cv-head { flex-direction: column; gap: 0; }
+  .cv-period { white-space: normal; }
+  /* No margin to hang into on a phone, so the logo sits above the title. */
+  .cv-logo { position: static; margin-bottom: 0.35rem; }
 
   .site-footer {
     display: block;
@@ -322,7 +326,7 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
     padding-top: 1.2rem;
     border-top: 1px solid var(--rule);
     font-family: var(--sans);
-    font-size: 14px;
+    font-size: var(--fs-sm);
     line-height: 1.9;
   }
   .site-footer a { color: var(--slate); }
@@ -334,9 +338,9 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
 
 
 /* CV-style blocks on the home page */
-.cv-block { margin: 0 0 1.8rem; max-width: var(--measure); }
+.cv-block { margin: 0 0 1.3rem; max-width: var(--measure); }
 
-.cv-entry { margin: 0 0 1.4rem; }
+.cv-entry { margin: 0 0 1.05rem; position: relative; }
 
 .cv-head {
   display: flex;
@@ -346,6 +350,26 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
   border-bottom: 1px solid var(--rule);
   padding-bottom: 0.3rem;
   margin-bottom: 0.35rem;
+}
+
+/* The logo hangs in the left margin so the text column stays exactly aligned
+   whether or not an entry has one. */
+.cv-logo {
+  position: absolute;
+  left: -2.6rem;
+  top: 0.15rem;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .cv-title {
@@ -361,6 +385,9 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
 
 .cv-title:hover { color: var(--magenta); text-decoration-color: var(--magenta); }
 .cv-title-plain { text-decoration: none; }
+
+.inst { margin-bottom: 2.8rem; }
+.inst .prose h3 { margin-top: 1.6rem; font-size: var(--fs-md); color: var(--slate); }
 
 .cv-period {
   font-family: var(--sans);
@@ -382,10 +409,13 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; max-widt
 }
 
 .cv-bullets { margin: 0; padding-left: 1.15rem; }
-.cv-bullets li { margin-bottom: 0.35rem; font-size: var(--fs-md); line-height: 1.5; }
+.cv-bullets li { margin-bottom: 0.22rem; font-size: var(--fs-md); line-height: 1.45; }
 .cv-bullets li::marker { color: var(--slate); }
 
 @media (max-width: 720px) {
   .cv-head { flex-direction: column; gap: 0; }
+  .cv-period { white-space: normal; }
+  /* No margin to hang into on a phone, so the logo sits above the title. */
+  .cv-logo { position: static; margin-bottom: 0.35rem; }
   .cv-period { white-space: normal; }
 }

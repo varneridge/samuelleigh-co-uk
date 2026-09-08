@@ -4,6 +4,7 @@ interface Item {
   title: string;
   period: string;
   org?: string;
+  logo?: string;
   bullets: string[];
 }
 
@@ -12,13 +13,21 @@ interface Props {
 }
 
 const { items } = Astro.props;
+const hasLogos = items.some((i) => i.logo);
 ---
 
-<div class="cv-block">
+<div class={`cv-block${hasLogos ? ' with-logos' : ''}`}>
   {items.map((item) => (
     <article class="cv-entry">
       <div class="cv-head">
-        {item.href ? <a class="cv-title" href={item.href}>{item.title}</a> : <span class="cv-title cv-title-plain">{item.title}</span>}
+        {hasLogos && (
+          <span class="cv-logo">
+            {item.logo && <img src={item.logo} alt="" loading="lazy" />}
+          </span>
+        )}
+        {item.href
+          ? <a class="cv-title" href={item.href}>{item.title}</a>
+          : <span class="cv-title cv-title-plain">{item.title}</span>}
         <span class="cv-period">{item.period}</span>
       </div>
       {item.org && <p class="cv-org">{item.org}</p>}
