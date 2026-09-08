@@ -10,7 +10,7 @@ backend:
 
 media_folder: public/images
 public_folder: /images
-
+ 
 collections:
   - name: writing
     label: Writing
@@ -51,7 +51,7 @@ collections:
       - name: body
         label: Body
         widget: markdown
-
+ 
   - name: hearings
     label: Hearings
     label_singular: Hearing note
@@ -80,7 +80,7 @@ collections:
       - name: session
         label: Session
         widget: string
-        hint: Session title and reference, e.g. "The OBR: 15 Years On (HC 1583)".
+        hint: 'Session title and reference, for example "The OBR: 15 Years On (HC 1583)".'
       - name: witnesses
         label: Witnesses
         widget: string
@@ -100,7 +100,7 @@ collections:
       - name: body
         label: Body
         widget: markdown
-
+ 
   - name: work
     label: Work
     label_singular: Work entry
@@ -152,3 +152,4 @@ collections:
       - name: body
         label: Body
         widget: markdown
+ 
