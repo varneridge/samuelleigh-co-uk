@@ -1,7 +1,7 @@
 ---
 title: Secretary
 period: Apr 2025 - 2026
-order: 30
+order: 3
 summary: RAG had never contacted its alumni. I built the contact base and ran the programme.
 org: LSE Raising and Giving (RAG), London
 logo: /images/pasted-image-1788902536372.png
