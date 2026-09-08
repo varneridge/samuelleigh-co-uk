@@ -10,7 +10,7 @@ bullets:
   - Programmed pre-plotted routes into unused capacity in the station navigation system, cutting launch preparation from around two minutes to thirty seconds at no cost. Now standard practice at the station.
 role: Volunteer boat and shore crew
 context: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).
-thumbnail: /images/thumb-rnli.jpg
+thumbnail: /images/pasted-image-1788903519079.png
 image: /images/rnli-helm.jpg
 imageCaption: Training exercise, May 2026.
 draft: false
