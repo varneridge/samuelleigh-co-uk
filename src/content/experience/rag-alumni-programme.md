@@ -10,7 +10,7 @@ bullets:
   - Coordinated committee administration across a forty-plus member committee. Previously Charity Officer, contributing to a £14,000 fundraising total for partners including Safe Passage International.
 role: Secretary; previously Charity Officer
 context: A student fundraising society with a committee of over forty.
-thumbnail: /images/pasted-image-1788902655394.png
+thumbnail: /images/pasted-image-1788902983563.png
 image: ''
 imageCaption: ''
 draft: false
