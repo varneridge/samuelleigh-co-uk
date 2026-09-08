@@ -1,7 +1,7 @@
 ---
 title: Student Consultant
 period: July 2026
-order: 10
+order: 2
 summary: A comparative policy report on the UK's missing framework for minerals partnerships with Africa.
 org: Missang Advisory, London. Live client project via the LSE Skills Accelerator.
 logo: /images/pasted-image-1788902482446.png
