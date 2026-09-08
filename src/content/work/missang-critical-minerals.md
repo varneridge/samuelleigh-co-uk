@@ -1,7 +1,7 @@
 ---
 title: The UK's missing minerals strategy
 period: '2026'
-order: 20
+order: 2
 summary: A comparative policy report for a Westminster geostrategy advisory on UK minerals partnerships with Africa.
 role: Student consultant, in a team
 context: Three-week live-client project for Missang Advisory, via the LSE Skills Accelerator.
