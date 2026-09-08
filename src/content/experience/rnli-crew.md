@@ -1,18 +1,19 @@
 ---
 title: Volunteer boat and shore crew, RNLI
-period: '2023-present'
+period: 2023-present
 order: 20
-org: 'Royal National Lifeboat Institution, Littlestone Lifeboat Station, Kent; also inducted at Tower Lifeboat Station, London'
+summary: Search and rescue callouts, and what they teach you about acting on incomplete information.
+org: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).
 logo: /images/placeholder-rnli.png
-summary: 'Search and rescue callouts, and what they teach you about acting on incomplete information.'
+bullets:
+  - Crew on operational callouts in response to HM Coastguard taskings, assessing scene conditions under time pressure with incomplete information and coordinating with the Coastguard, police and ambulance.
+  - Programmed pre-plotted routes into unused capacity in the station navigation system, cutting launch preparation from around two minutes to thirty seconds at no cost. Now standard practice at the station.
 role: Volunteer boat and shore crew
-context: 'Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).'
+context: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).
 thumbnail: /images/thumb-rnli.jpg
 image: /images/rnli-helm.jpg
-imageCaption: 'Training exercise, May 2026.'
-bullets:
-  - 'Crew on operational callouts in response to HM Coastguard taskings, assessing scene conditions under time pressure with incomplete information and coordinating with the Coastguard, police and ambulance.'
-  - 'Programmed pre-plotted routes into unused capacity in the station navigation system, cutting launch preparation from around two minutes to thirty seconds at no cost. Now standard practice at the station.'
+imageCaption: Training exercise, May 2026.
+draft: false
 ---
 
 I am volunteer boat and shore crew at Littlestone and Tower, supporting search and rescue
