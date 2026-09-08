@@ -13,7 +13,7 @@ context: Three-week live-client project for a Westminster geostrategy and critic
 thumbnail: ''
 image: ''
 imageCaption: ''
-draft: false
+draft: true
 ---
 
 Check with Missang Advisory before publishing anything beyond the summary above. The report is
