@@ -35,7 +35,7 @@ what I write about.
 - **History of the Foreign Relations of the People's Republic of China, 1949 to 2008**
 - **Migration: Current Research, Critical Approaches**
 - **Political Geography**
-- **Dissertation.** [Add the topic once it is settled.]
+- **Dissertation.**
 
 ### Societies
 
