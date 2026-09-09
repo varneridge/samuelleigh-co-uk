@@ -19,8 +19,12 @@ draft: false
 
 ## My part in it
 
-Be precise about which parts were yours and which were the team's.
+I was the team's editor so I had to go through all the 45 page report's sections and polish and ensure it read as one coherent document rather than 5 separate essays. I also drew up supporting charts and graphs from public data.
+
+I also created the actual policy proposals based on the comparative research carried out by the rest of the team and explained this in detail, as well as visually using flow charts, assigning each UK Government agency explicit roles and using existing legislative frameworks and mandates.
 
 ## What I would do differently
 
-Two or three sentences.
+I would set the conventions on day one rather than fixing them at the end: British English, one footnote style, and every debate about house style settled before anyone started writing. Harmonising five voices after the fact took far longer than agreeing a standard would have.
+
+I would also work off drafts rather than finished sections. Because the proposals depended on the comparative research, I could not start until every study had been polished and submitted, which compressed the design work into the time left. Notes and rough drafts as they were written would have let the two run in parallel.
