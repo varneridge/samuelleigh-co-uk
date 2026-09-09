@@ -2,12 +2,13 @@
 title: Volunteer boat and shore crew, RNLI
 period: 2023-present
 order: 1
-summary: Search and rescue callouts, and what they teach you about acting on incomplete information.
+summary: Search and rescue operations on the River Thames and South-East Coast
 org: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026)
 logo: /images/pasted-image-1788902390252.png
 bullets:
-  - Crew on operational callouts in response to HM Coastguard taskings, assessing scene conditions under time pressure with incomplete information and coordinating with the Coastguard, police and ambulance.
-  - Programmed pre-plotted routes into unused capacity in the station navigation system, cutting launch preparation from around two minutes to thirty seconds at no cost. Now standard practice at the station.
+  - Serve as volunteer boat and shore crew at the station, supporting search and rescue operations in response to HM Coastguard taskings; responsibilities include crewing on operational callouts, supporting launches and recoveries, Casualty care, and ongoing training to maintain operational readiness
+  - Programmed pre-plotted routes into unused capacity in the station navigation system, cutting launch preparation from around two minutes to thirty seconds at no cost.
+  - 'Interviewed live on BBC Radio Kent: translated technical terms and mechanisms to accessible public language and incorporated the “float to live” cold-water survival message; received positive feedback from the lifeboat operations manager'
 role: Volunteer boat and shore crew
 context: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026).
 thumbnail: /images/pasted-image-1788903519079.png
@@ -24,7 +25,7 @@ Littlestone had 29 callouts in 2025, and typically closer to 50, operating betwe
 
 The callout figures measure how often each station is needed, not what is at stake when it is. A shout at Littlestone is no less serious for being rare, and the crew who answer it have left work, or dinner, or bed to do so. My pager went on Christmas Day 2024, and enough people put their day down to launch the boat. Fifty callouts a year is not enough to build a routine around. People turn out anyway.
 
-## What the work actually involves
+## What the work involves
 
 Training runs twice a week and you attend what you can. In 2024 I was at the station over 50 times for training and callouts.
 
