@@ -1,9 +1,14 @@
 ---
 title: The Sino-Soviet split was a choice, not a structural inevitability
-date: 2026-09-01
+date: 2026-02-04
 summary: A response to the claim that China was too weak to be an equal of the Soviet Union but too powerful to be a subordinate.
 note: Written at LSE in 2026
-draft: true
+thumbnail: ''
+committee: ''
+session: ''
+witnesses: ''
+attendance: ''
+draft: false
 ---
 
 In May 1989, Deng Xiaoping met Mikhail Gorbachev to normalise Sino-Soviet relations. Deng, who had personally delivered some of the harshest doctrinal attacks of the 1960s, accusing the Soviets of great-power chauvinism and betrayal of Marxism-Leninism, now offered a revealing reassessment: "we no longer think everything that we said at that time was right."[^1] When asked about the split's cause, Deng suggested "the basic problem was that the Chinese were not treated as equals and felt humiliated."[^2] This language of feeling and treatment, rather than material capabilities, reframes the split as a question of intangible status and recognition.
@@ -18,7 +23,7 @@ Yet the claim measures power in the wrong currency. Economic dependence, militar
 
 By this metric, China was far from weak. The CCP had achieved power through indigenous revolutionary struggle, at times against Moscow's wishes, rather than through Soviet occupation. This distinction mattered because, where Poland's Gomulka and Hungary's Kadar owed their positions to Moscow's approval, Mao owed his to twenty-two years of revolutionary warfare.[^13] This revolutionary power extended beyond the communist bloc: from 1950, Beijing positioned itself as mentor to Asian liberation movements, promising Ho Chi Minh "all the military assistance Vietnam needed" and dispatching advisors to guide Viet Minh resistance to France.[^14] Moreover, at Bandung in 1955, a conference from which Moscow was excluded, Chinese diplomats built a united front with decolonising states. The Chinese model of peasant mobilisation offered a path to revolution that Soviet industrial modernisation could not; indeed, China's Third World influence pushed the Soviets towards more sustained commitments in response.[^15] In this light it is difficult to accept that China was fundamentally "too weak to be an equal."
 
-Khrushchev's February 1956 Secret Speech destabilised communist orthodoxy, and if China was "too weak to be an equal," this moment should have confirmed its marginality. Instead, it demonstrated the opposite. With Stalin gone, Mao had become increasingly reluctant to respect the authority of Stalin's weaker successor.[^16] On 5 April 1956, *Renmin Ribao* published "On the Historical Experience of the Proletarian Dictatorship," offering an independent evaluation of Stalin's legacy that argued he remained a "great Marxist-Leninist" despite his errors.[^17] The Kremlin responded by admitting errors in its China policy and promising more aid to China.[^18] This was not an isolated concession. At the 1954 Geneva Conference, Moscow had pushed to have China invited as "an equal partner" to negotiate Asian conflicts, and Radchenko observes that throughout this period "the Soviets often deferred to Chinese expertise, especially in relation to Southeast Asia."[^19] Material weakness had not prevented Beijing from exercising real authority within the communist world.
+Khrushchev's February 1956 Secret Speech destabilised communist orthodoxy, and if China was "too weak to be an equal," this moment should have confirmed its marginality. Instead, it demonstrated the opposite. With Stalin gone, Mao had become increasingly reluctant to respect the authority of Stalin's weaker successor.[^16] On 5 April 1956, _Renmin Ribao_ published "On the Historical Experience of the Proletarian Dictatorship," offering an independent evaluation of Stalin's legacy that argued he remained a "great Marxist-Leninist" despite his errors.[^17] The Kremlin responded by admitting errors in its China policy and promising more aid to China.[^18] This was not an isolated concession. At the 1954 Geneva Conference, Moscow had pushed to have China invited as "an equal partner" to negotiate Asian conflicts, and Radchenko observes that throughout this period "the Soviets often deferred to Chinese expertise, especially in relation to Southeast Asia."[^19] Material weakness had not prevented Beijing from exercising real authority within the communist world.
 
 The 1956 Polish and Hungarian crises revealed how substantially Chinese standing had grown. When upheaval threatened Soviet control over Eastern Europe, Khrushchev asked the Chinese for advice, and Beijing dispatched a delegation to Moscow whose counsel influenced Soviet decisions on both crises.[^20] The Soviet leadership's 30 October declaration proclaiming readiness to place relations with socialist states on a basis of "sovereign equality" came partly at Chinese urging; Radchenko notes that Mao "was unquestionably satisfied" when Khrushchev agreed to publish it.[^21] That Moscow consulted Beijing on European matters demonstrated ideological authority that material weakness alone cannot explain. At the November 1957 Moscow conference, Mao declared that "the East Wind prevails over the West Wind" and publicly affirmed Soviet leadership.[^22] Yet the act of affirmation revealed where authority lay: by endorsing Soviet leadership, Mao "virtually had placed himself in the capacity of a judge from a higher court, implying that it was he who now occupied a morally superior position," for to grant leadership was to claim the standing to grant it.[^23] That standing came not from material capability but from revolutionary credentials, credentials the Soviet leadership, increasingly defensive after de-Stalinisation, could not easily dismiss. By 1957, China was not too weak to be an equal. In ideological terms, it had become an equal whose recognition Soviet leadership increasingly required.
 
@@ -50,44 +55,44 @@ The claim frames China as too weak for equality yet too powerful for subordinati
 
 Structure constrained but did not determine. De-Stalinisation created opportunities for Chinese assertion; it did not compel Mao to exploit them through public doctrinal warfare. The Great Leap's failures made external scapegoats useful; they did not require Mao to fuse domestic purges with anti-Soviet campaigns. The split occurred not because China occupied an impossible position but because Mao made choices that rendered accommodation impossible.
 
-[^1]: Sergey Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," in Melvyn P. Leffler and Odd Arne Westad (eds.), *The Cambridge History of the Cold War*, vol. 1 (Cambridge: Cambridge University Press, 2010), 265.
+[^1]: Sergey Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," in Melvyn P. Leffler and Odd Arne Westad (eds.), _The Cambridge History of the Cold War_, vol. 1 (Cambridge: Cambridge University Press, 2010), 265.
 [^2]: Ibid.
-[^3]: Liu Shaoqi, Report to the CPSU CC Politburo, 4 July 1949, translated in Odd Arne Westad (ed.), *Brothers in Arms: The Rise and Fall of the Sino-Soviet Alliance, 1945-1963* (Stanford: Stanford University Press, 1998), 10.
+[^3]: Liu Shaoqi, Report to the CPSU CC Politburo, 4 July 1949, translated in Odd Arne Westad (ed.), _Brothers in Arms: The Rise and Fall of the Sino-Soviet Alliance, 1945-1963_ (Stanford: Stanford University Press, 1998), 10.
 [^4]: Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 266.
-[^5]: Chen Jian, *Mao's China and the Cold War* (Chapel Hill: University of North Carolina Press, 2001), 8-9.
-[^6]: Lorenz M. Lüthi, *The Sino-Soviet Split: Cold War in the Communist World* (Princeton: Princeton University Press, 2008), 345.
+[^5]: Chen Jian, _Mao's China and the Cold War_ (Chapel Hill: University of North Carolina Press, 2001), 8-9.
+[^6]: Lorenz M. Lüthi, _The Sino-Soviet Split: Cold War in the Communist World_ (Princeton: Princeton University Press, 2008), 345.
 [^7]: Ibid., 352.
-[^8]: Chen, *Mao's China and the Cold War*, 60.
-[^9]: Lüthi, *The Sino-Soviet Split*, 40.
-[^10]: Shu Guang Zhang, "The Sino-Soviet Alliance and the Cold War in Asia, 1954-1962," in Leffler and Westad (eds.), *The Cambridge History of the Cold War*, vol. 1, 371.
-[^11]: Lüthi, *The Sino-Soviet Split*, 349.
+[^8]: Chen, _Mao's China and the Cold War_, 60.
+[^9]: Lüthi, _The Sino-Soviet Split_, 40.
+[^10]: Shu Guang Zhang, "The Sino-Soviet Alliance and the Cold War in Asia, 1954-1962," in Leffler and Westad (eds.), _The Cambridge History of the Cold War_, vol. 1, 371.
+[^11]: Lüthi, _The Sino-Soviet Split_, 349.
 [^12]: Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 265-266.
-[^13]: Norman Naimark, "The Sovietization of Eastern Europe, 1944-1953," in Leffler and Westad (eds.), *The Cambridge History of the Cold War*, vol. 1, 175-197.
-[^14]: Chen, *Mao's China and the Cold War*, 121-122.
-[^15]: Jeremy Friedman, *Shadow Cold War: The Sino-Soviet Competition for the Third World* (Chapel Hill: University of North Carolina Press, 2015), 58-59.
-[^16]: Chen, *Mao's China and the Cold War*, 63.
+[^13]: Norman Naimark, "The Sovietization of Eastern Europe, 1944-1953," in Leffler and Westad (eds.), _The Cambridge History of the Cold War_, vol. 1, 175-197.
+[^14]: Chen, _Mao's China and the Cold War_, 121-122.
+[^15]: Jeremy Friedman, _Shadow Cold War: The Sino-Soviet Competition for the Third World_ (Chapel Hill: University of North Carolina Press, 2015), 58-59.
+[^16]: Chen, _Mao's China and the Cold War_, 63.
 [^17]: Ibid., 65.
 [^18]: Zhang, "Sino-Soviet Alliance and the Cold War in Asia," 360.
 [^19]: Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 252.
-[^20]: Westad (ed.), *Brothers in Arms*, 19.
+[^20]: Westad (ed.), _Brothers in Arms_, 19.
 [^21]: Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 254.
-[^22]: Westad (ed.), *Brothers in Arms*, 20; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 254-255.
-[^23]: Chen, *Mao's China and the Cold War*, 71; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 254.
-[^24]: Vojtech Mastny, "Soviet Foreign Policy, 1953-1962," in Leffler and Westad (eds.), *The Cambridge History of the Cold War*, vol. 1, 331.
-[^25]: Csaba Békés, "East Central Europe, 1953-1956," in Leffler and Westad (eds.), *The Cambridge History of the Cold War*, vol. 1, 346-347.
+[^22]: Westad (ed.), _Brothers in Arms_, 20; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 254-255.
+[^23]: Chen, _Mao's China and the Cold War_, 71; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 254.
+[^24]: Vojtech Mastny, "Soviet Foreign Policy, 1953-1962," in Leffler and Westad (eds.), _The Cambridge History of the Cold War_, vol. 1, 331.
+[^25]: Csaba Békés, "East Central Europe, 1953-1956," in Leffler and Westad (eds.), _The Cambridge History of the Cold War_, vol. 1, 346-347.
 [^26]: Mastny, "Soviet Foreign Policy, 1953-1962," 318.
 [^27]: Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 248.
-[^28]: Liu Shaoqi, Report to the CPSU CC Politburo, 4 July 1949, in Westad (ed.), *Brothers in Arms*, 10.
+[^28]: Liu Shaoqi, Report to the CPSU CC Politburo, 4 July 1949, in Westad (ed.), _Brothers in Arms_, 10.
 [^29]: Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 248.
-[^30]: Lüthi, *The Sino-Soviet Split*, 158.
-[^31]: Chen, *Mao's China and the Cold War*, 79; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 255-256.
-[^32]: Chen, *Mao's China and the Cold War*, 82.
-[^33]: Transcript of Conversation, Mao Zedong and Pavel Iudin, 22 July 1958, translated in *Cold War International History Project Bulletin* 6-7 (1995-96), 155-159.
+[^30]: Lüthi, _The Sino-Soviet Split_, 158.
+[^31]: Chen, _Mao's China and the Cold War_, 79; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 255-256.
+[^32]: Chen, _Mao's China and the Cold War_, 82.
+[^33]: Transcript of Conversation, Mao Zedong and Pavel Iudin, 22 July 1958, translated in _Cold War International History Project Bulletin_ 6-7 (1995-96), 155-159.
 [^34]: Ibid., 156.
 [^35]: Ibid., 158.
-[^36]: "A Proposal Concerning the General Line of the International Communist Movement" (14 June 1963), in *The Polemic on the General Line of the International Communist Movement* (Peking: Foreign Languages Press, 1965), 5.
-[^37]: Lüthi, *The Sino-Soviet Split*, 285.
-[^38]: Chen, *Mao's China and the Cold War*, 76.
+[^36]: "A Proposal Concerning the General Line of the International Communist Movement" (14 June 1963), in _The Polemic on the General Line of the International Communist Movement_ (Peking: Foreign Languages Press, 1965), 5.
+[^37]: Lüthi, _The Sino-Soviet Split_, 285.
+[^38]: Chen, _Mao's China and the Cold War_, 76.
 [^39]: Ibid., 81; Radchenko, "The Rise and Fall of the Sino-Soviet Alliance," 256.
-[^40]: Lüthi, *The Sino-Soviet Split*, 274.
+[^40]: Lüthi, _The Sino-Soviet Split_, 274.
 [^41]: Ibid., 9-10, 347.
