@@ -321,16 +321,13 @@ collections:
           - {name: title, label: Heading, widget: string}
           - {name: lede, label: Intro line, widget: text}
       - name: intro
-        label: Opening and introduction
+        label: Opening paragraph
         file: src/content/pages/intro.md
         fields:
           - name: lede
             label: Opening paragraph
             widget: text
             hint: The first thing anyone reads. Three sentences at most.
-          - name: body
-            label: Introduction
-            widget: markdown
       - name: education-detail
         label: Education page
         file: src/content/pages/education-detail.md
