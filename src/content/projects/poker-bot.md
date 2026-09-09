@@ -2,13 +2,12 @@
 title: Poker Bot
 period: June 2026
 order: 10
-summary: Finalist in the UK's first inter-university poker bot competition. The hard part was the testing.
+summary: Finalist in the UK's first inter-university poker bot competition.
 org: Fullhouse Poker Bot Hackathon, sponsored by Quadrature Capital, London
 logo: /images/placeholder-fullhouse.png
 bullets:
   - Reached the finals of the UK's first poker bot competition, top 64 of around 190 entrants after two Swiss qualifier rounds.
-  - Validated each change on roughly 100,000 simulated matches using variance-reduced paired-seed A/B tests, with decision rules fixed before results were seen.
-stack: Monte Carlo equity estimation, Bayesian opponent modelling
+stack: ''
 status: Complete
 thumbnail: ''
 image: ''
