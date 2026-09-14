@@ -30,3 +30,5 @@ Nor is any of this most of what the RNLI does, whatever the phrase taxi service 
 Nothing here requires you to think the crossings are fine. They are not. In August a dinghy carrying 173 people caught fire off Boulogne. At least 162 have died on the route since 2018.
 
 You can want the boats stopped and still think all of this. David Wimble, a Reform councillor in Kent and a former lifeboat volunteer, condemned the abuse of crews this week and made the same point. The people being doxxed did not set immigration policy, did not choose the casualties and were not permitted to choose the port. Their pager went on a Sunday morning, and it told them almost nothing.
+
+![](/images/IMG-20250713-WA0011.jpg)
