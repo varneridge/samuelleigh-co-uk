@@ -1,5 +1,5 @@
 ---
-title: Lifeboat Crew Training Application
+title: Lifeboat Crew Training App
 period: '2025'
 order: 50
 summary: vkbfddvodfvj
@@ -88,7 +88,7 @@ export or erase it. For something passed around volunteers inside a charity with
 protection obligations, the simplest defensible position was to collect nothing, so that there is
 nothing to lose.
 
-![Progress stays on the device, and can be exported or erased from one page. ](/images/06-progress-and-data.png "Progress stays on the device, and can be exported or erased from one page. ")
+![Progress stays on the device, and can be exported or erased from one page.](/images/06-progress-and-data.png "Progress stays on the device, and can be exported or erased from one page.")
 
 ## Built without writing code
 
