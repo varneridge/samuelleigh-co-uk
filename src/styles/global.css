@@ -275,6 +275,16 @@ main > :first-child { margin-top: 0; }
 
 figure { margin: 2rem 0; max-width: 100%; }
 figure img { width: 100%; height: auto; border-radius: 6px; display: block; }
+
+img { max-width: 100%; height: auto; }
+.prose img {
+  display: block;
+  width: 100%;
+  max-width: var(--measure);
+  height: auto;
+  border-radius: 6px;
+  margin: 2rem 0;
+}
 figcaption {
   font-family: var(--sans);
   font-size: var(--fs-xs);
