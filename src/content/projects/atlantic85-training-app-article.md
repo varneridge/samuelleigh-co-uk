@@ -1,32 +1,41 @@
 ---
-title: "Atlantic 85 Crew Training"
-subtitle: "Putting a scattered training syllabus in one place, in two formats, built without knowing how to code"
-date: [ADD DATE]
-tags: [project, software, RNLI]
+title: Lifeboat Crew Training Application
+period: '2025'
+order: 50
+summary: vkbfddvodfvj
+org: ''
+logo: ''
+bullets: []
+stack: Claude
+status: Complete
+thumbnail: ''
+image: ''
+imageCaption: ''
+draft: false
+date:
+  - ADD DATE
+subtitle: Putting a scattered training syllabus in one place, in two formats, built without knowing how to code
+tags:
+  - project
+  - software
+  - RNLI
 ---
 
-# Atlantic 85 Crew Training
+# Atlantic 85 Crew Training Application
 
 Every volunteer on an inshore lifeboat works through the same competence framework, from the
 induction modules you complete before you are allowed near the boat, through to the command
-qualifications for Helm and Head Launcher. The framework is long and it is examined. The material
-you need to work through it is not in one place.
+qualifications for Helm and Head Launcher. The framework is long and it is examined. The material you need to work through it is not in one place.
 
 It is in a crew handbook, a boat manual, the training standards, a set of standard operating
-procedures, a separate set of local operating procedures, and assorted PDFs. All of it is
-accurate. None of it is joined up. Revising a single module meant knowing which document held the
+procedures, a separate set of local operating procedures, and assorted PDFs. All of it is accurate. None of it is joined up. Revising a single module meant knowing which document held the
 procedure and which held the theory, then holding them together in your head. The effort was
 going into finding the material rather than learning it.
 
 I built this for myself, to stop doing that. I cannot write code; the application was built with
-Claude, and what that actually involved is further down. Other crew saw me using it and asked for
-a copy, so I spent longer on it than I had intended to, and circulated it. Several members of the
-crew have since told me they use it as their main revision resource, which is the only measure of
-the thing I actually care about.
+Claude, and what that actually involved is further down. Other crew saw me using it and asked for a copy, so I spent longer on it than I had intended to, and circulated it. Several members of the crew have since told me they use it as their main revision resource, which is the only measure of the thing I actually care about.
 
-<!-- IMAGE 1: 01-pathway.png
-     Caption: The pathway on one screen. Shore crew and boat crew tracks, sharing a common
-     induction stage. -->
+![The pathway on one screen. Shore crew and boat crew tracks, sharing a common induction stage.](/images/01-pathway.png "The pathway on one screen. Shore crew and boat crew tracks, sharing a common induction stage.")
 
 ## One place, two formats
 
@@ -43,8 +52,7 @@ Almost every module's notes open with what you will learn. Procedures are set ou
 steps in the order they happen, and the points where getting it wrong matters are flagged as
 warnings rather than left in the body of the text.
 
-<!-- IMAGE 2: 02-study-notes.png
-     Caption: The notes format. Demonstration content, not training material. -->
+![The notes format. Demonstration content, not training material.](/images/02-study-notes.png "The notes format. Demonstration content, not training material.")
 
 Testing works two ways, because checking and learning are different activities. Assessment gives
 you a fixed set, marked at the end, with a review screen filtered to the ones you got wrong.
@@ -53,11 +61,7 @@ mode you want while you are still learning the material. Every one of the 1,797 
 a written explanation of why the right answer is right, because a score on its own teaches
 nothing.
 
-<!-- IMAGE 3: 03-assessment.png
-     Caption: Assessment mode. Demonstration questions, not training material. -->
-
-<!-- IMAGE 4: 04-practice-feedback.png
-     Caption: Continuous practice reveals the reasoning on every answer, right or wrong. -->
+![Assessment mode. Demonstration questions, not training material.](/images/03-assessment.png "Assessment mode. Demonstration questions, not training material.")![Continuous practice reveals the reasoning on every answer, right or wrong.](/images/04-practice-feedback.png "Continuous practice reveals the reasoning on every answer, right or wrong.")
 
 ## The choices that shaped it
 
@@ -71,8 +75,7 @@ that the answer to question twelve is C, which is not the same as knowing it. Th
 as a pass, a threshold I set to give myself a target rather than something drawn from any formal
 standard.
 
-<!-- IMAGE 5: 05-results-review.png
-     Caption: Every wrong answer comes back with the correct one and the reasoning. -->
+![Every wrong answer comes back with the correct one and the reasoning.](/images/05-results-review.png "Every wrong answer comes back with the correct one and the reasoning.")
 
 **Separating content from code.** Questions, notes and the pathway definitions sit in three plain
 data files. Anyone who can edit a text file can correct a question and refresh the browser. That
@@ -85,8 +88,7 @@ export or erase it. For something passed around volunteers inside a charity with
 protection obligations, the simplest defensible position was to collect nothing, so that there is
 nothing to lose.
 
-<!-- IMAGE 6: 06-progress-and-data.png
-     Caption: Progress stays on the device, and can be exported or erased from one page. -->
+![Progress stays on the device, and can be exported or erased from one page. ](/images/06-progress-and-data.png "Progress stays on the device, and can be exported or erased from one page. ")
 
 ## Built without writing code
 
@@ -119,10 +121,10 @@ Thirteen modules on the pathway have questions but no notes written for them, an
 neither. Progress does not sync between devices, by design. There is no spaced repetition, only a
 pool of the questions you keep getting wrong, which you can drill directly.
 
----
+***
 
-*Circulated to crew at my own station while data protection policies allowed it. The repository
+\*Circulated to crew at my own station while data protection policies allowed it. The repository
 is private. This is an independent project: not affiliated with, endorsed by, or produced by the
 RNLI, and no substitute for supervised training, station assessment, or the current official
 documentation. Screenshots use placeholder content drawn from public sources rather than training
-material.*
+material.\*
