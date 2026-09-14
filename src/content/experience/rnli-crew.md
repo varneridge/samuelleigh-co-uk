@@ -1,7 +1,7 @@
 ---
 title: Volunteer boat and shore crew, RNLI
 period: 2023-present
-order: 1
+order: 2
 summary: Search and rescue operations on the River Thames and South-East Coast
 org: Littlestone Lifeboat Station, Kent (since 2023) and Tower Lifeboat Station, London (since 2026)
 logo: /images/pasted-image-1788902390252.png
