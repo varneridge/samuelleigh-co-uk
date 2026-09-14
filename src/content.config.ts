@@ -13,7 +13,12 @@ const writing = defineCollection({
     committee: z.string().optional(),
     session: z.string().optional(),
     witnesses: z.string().optional(),
-    attendance: z.enum(['In person', 'Watched online']).optional(),
+    // Sveltia writes '' rather than omitting a blank select, so strip it before
+    // the enum check, which would otherwise reject it and fail the build.
+    attendance: z.preprocess(
+      (v) => (v === '' ? undefined : v),
+      z.enum(['In person', 'Watched online']).optional()
+    ),
     draft: z.boolean().default(false)
   })
 });
