@@ -14,7 +14,7 @@ context: A student fundraising society with a committee of over forty.
 thumbnail: /images/pasted-image-1788902983563.png
 image: ''
 imageCaption: ''
-draft: true
+draft: false
 ---
 
 I served as Charity Officer from October 2024 to April 2025 and then as Secretary until 2026.
