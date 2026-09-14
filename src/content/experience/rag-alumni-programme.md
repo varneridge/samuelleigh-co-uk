@@ -17,35 +17,8 @@ imageCaption: ''
 draft: false
 ---
 
-I served as Charity Officer from October 2024 to April 2025 and then as Secretary until 2026.
-Across both roles the society raised £14,000 for three charity partners, one of which was Safe
-Passage International, which works on safe routes for refugees.
+I was Charity Officer from October 2024 to April 2025, then Secretary until 2026. Across both roles the society raised £14,000 for three charity partners, one of which was Safe Passage International, which works on safe routes for refugees.
 
-## The gap
+As Secretary I handled the committee's administration: minutes, agendas, records and internal communications. I recruited and oversaw a Social Secretary and three Alumni Officers.
 
-RAG had never systematically contacted its alumni. There was no list, no programme, and no
-record of who had been on committee in previous years.
-
-## What I built
-
-I built a contact base from nothing, using LinkedIn and the university's alumni relations
-team, and ran two strands from it.
-
-The first was an alumni panel in February 2026, with two former RAG members: an executive at
-Brunswick Group and a policy adviser at HM Treasury. The second was an ongoing series of
-alumni success stories on Instagram.
-
-The programme cost nothing to run. It was submitted for the Students' Union Best New
-Initiative award.
-
-## The number
-
-Giving Tuesday fundraising grew from £536 to over £1,000 year on year. The alumni programme
-contributed to that; I would not claim it was the only cause, and the honest position is that
-I cannot separate its effect from everything else that changed that year.
-
-## What I would do differently
-
-Two or three sentences. The obvious one is that a contact base built by one person on a
-one-year committee decays the moment that person leaves, and I should have written down how
-to maintain it.
+RAG had no alumni list, so I put one together using LinkedIn, the university's alumni relations team, and any previous documentation I could find. We used it for an alumni panel in February 2026, with a Brunswick Group executive and an HM Treasury policy adviser, and for a series of alumni posts on Instagram. It cost nothing to run and was submitted for the Students' Union Best New Initiative award. Giving Tuesday fundraising went from £536 to just over £1,000 year on year, though I cannot say how much of that was down to the alumni work.
