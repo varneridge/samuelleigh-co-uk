@@ -8,7 +8,7 @@ committee: ''
 session: ''
 witnesses: ''
 attendance: ''
-draft: true
+draft: false
 ---
 
 Most of what we launch to at Littlestone is a child who has wandered off from the amusements at Dymchurch, a swimmer who has gone further out than they meant to, a kayaker carried offshore on the ebb. The pager goes and tells you almost nothing. You find out what the job is when you get there, and by then you are already at sea. Littlestone is twenty miles from Dover, about as close to the Channel crossing route as a lifeboat station gets.
