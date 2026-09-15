@@ -90,37 +90,6 @@ nothing to lose.
 
 ![Progress stays on the device, and can be exported or erased from one page.](/images/06-progress-and-data.png "Progress stays on the device, and can be exported or erased from one page.")
 
-## Built without writing code
-
-The interesting part of this project is what the work consisted of once the code stopped being
-the constraint. It was deciding what to build and for whom, specifying behaviour precisely enough
-that it could be implemented, reading output I had not written and judging whether it was right,
-and rejecting it when it was not.
-
-The domain knowledge was mine and could not have come from anywhere else. I knew the pathway
-because I was working through it. I knew that the problem was fragmentation rather than a lack of
-material. I knew what a crew member needs at each module, because I needed it. And I knew that a
-revision tool which fixes the answer positions teaches people the position rather than the
-content. The useful skill turned out to be specification and verification, not syntax.
-
-## Testing the claim, not the code
-
-Which is why, before publishing this, I went back and checked whether the app did everything I
-had been telling people it did. It did not. One feature had never worked at all, and had been
-failing silently since the day it was written: no error, no warning, nothing visible from reading
-the code and deciding it looked correct. It was found by testing the claim from the outside
-instead, and it is now fixed.
-
-That is the discipline the project taught me. When you have not written something yourself, you
-cannot audit it by reading it. You check whether it does what you say it does, and you assume it
-does not until it demonstrably does.
-
-## What it does not do
-
-Thirteen modules on the pathway have questions but no notes written for them, and two have
-neither. Progress does not sync between devices, by design. There is no spaced repetition, only a
-pool of the questions you keep getting wrong, which you can drill directly.
-
 ***
 
 \*Circulated to crew at my own station while data protection policies allowed it. The repository
